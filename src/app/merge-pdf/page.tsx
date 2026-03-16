@@ -47,7 +47,7 @@ export default function MergePDFPage() {
       console.error(error);
       setStatus("idle");
       toast.error("Server Error", {
-        description: "Could not connect to the Python backend.",
+        description: "Failed to process the File. Please try again.",
       });
     }
   };

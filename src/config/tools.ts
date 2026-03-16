@@ -1,6 +1,6 @@
 import { 
   Merge, Scissors, FileText, FileType, 
-  Presentation, TableProperties, Image as ImageIcon, FileOutput 
+  Presentation, TableProperties, Image as ImageIcon, FileOutput, FileSliders
 } from 'lucide-react';
 
 export const PDF_TOOLS = [
@@ -44,6 +44,14 @@ export const PDF_TOOLS = [
     href: '/ppt-to-pdf', 
     color: 'bg-amber-50 text-amber-600' 
   },
+{ 
+    id: 'pdf-to-ppt',
+    name: 'PDF to PPT', 
+    desc: 'Convert PDF to PowerPoint slides', 
+    icon: FileSliders, 
+    href: '/pdf-to-ppt', 
+    color: 'bg-rose-50 text-rose-600' 
+  },
   { 
     id: 'excel-to-pdf',
     name: 'Excel to PDF', 
@@ -55,7 +63,7 @@ export const PDF_TOOLS = [
   { 
     id: 'image-to-pdf',
     name: 'Image to PDF', 
-    desc: 'Convert JPG/PNG to PDF', 
+    desc: 'Convert Image to PDF', 
     icon: ImageIcon, 
     href: '/image-to-pdf', 
     color: 'bg-purple-50 text-purple-600' 

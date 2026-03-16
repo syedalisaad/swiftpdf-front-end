@@ -1,18 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FileCode, ArrowLeft, FilePlus, Loader2, Download, CheckCircle2, RefreshCw, FileText } from "lucide-react";
+import { 
+  FileCode, ArrowLeft, FilePlus, Loader2, 
+  Download, CheckCircle2, RefreshCw, FileText 
+} from "lucide-react";
 import ToolHeader from "@/src/components/tools/ToolHeader";
 import FileCard from "@/src/components/tools/FileCard";
 import { PDF_TOOLS } from "@/src/config/tools";
+import { uploadFile } from "@/src/lib/api";
+import { toast } from "sonner";
 
 export default function WordToPDFPage() {
   const [file, setFile] = useState<File | null>(null);
   const [status, setStatus] = useState<"idle" | "processing" | "success">("idle");
+  const [downloadUrl, setDownloadUrl] = useState<string>(""); // Added inside component
+
+  // Cleanup to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (downloadUrl) window.URL.revokeObjectURL(downloadUrl);
+    };
+  }, [downloadUrl]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      // Logic to accept only Word documents
       const selectedFile = e.target.files[0];
       if (selectedFile.name.endsWith(".doc") || selectedFile.name.endsWith(".docx")) {
         setFile(selectedFile);
@@ -25,16 +37,31 @@ export default function WordToPDFPage() {
   const handleConvert = async () => {
     if (!file) return;
     setStatus("processing");
-    
-    // Simulate the server-side conversion logic
-    setTimeout(() => {
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const blob =  await uploadFile("/word-to-pdf", formData);
+      const url = window.URL.createObjectURL(blob);
+      setDownloadUrl(url);
       setStatus("success");
-    }, 3500);
+       toast.success("PDF Complete", {
+        description: "Your Doc has been converted PDF successfully!",
+      });
+    } catch (error) {
+      setStatus("idle");
+        toast.error("Server Error", {
+        description: "Failed to process the PDF. Please try again.",
+      });
+    }
   };
 
   const reset = () => {
     setFile(null);
     setStatus("idle");
+    if (downloadUrl) window.URL.revokeObjectURL(downloadUrl);
+    setDownloadUrl("");
   };
 
   return (
@@ -47,7 +74,6 @@ export default function WordToPDFPage() {
         </Link>
 
         <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
-          {/* Using FileText as the icon to represent the Word document source */}
           <ToolHeader 
             title="Word to PDF"
             description="Convert your Microsoft Word documents to professional PDF files instantly."
@@ -79,13 +105,11 @@ export default function WordToPDFPage() {
                     </label>
                   </div>
                 ) : (
-                  /* File List State */
                   <div className="space-y-8">
-                    {/* Reusing your FileCard - you might want to adjust the icon in FileCard later to show "DOCX" instead of "PDF" if the extension is different */}
-                    <FileCard file={file} index={0} onRemove={() => setFile(null)} />
+                    <FileCard file={file} file_type="word" index={0} onRemove={() => setFile(null)} />
                     
                     <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-100 flex items-center gap-4">
-                        <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600">
+                        <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 shrink-0">
                            <FileCode size={24} />
                         </div>
                         <p className="text-sm font-medium text-blue-800">
@@ -131,7 +155,8 @@ export default function WordToPDFPage() {
                 
                 <div className="flex flex-col gap-4 max-w-sm mx-auto">
                     <a 
-                        href="#" 
+                        href={downloadUrl} 
+                        download={`${file?.name.split('.')[0]}.pdf`}
                         className="py-4 bg-red-600 text-white rounded-2xl font-bold text-lg hover:bg-red-700 shadow-xl shadow-red-200 transition-all flex items-center justify-center gap-2 text-center"
                     >
                         <Download size={20} /> Download your PDF
@@ -147,7 +172,8 @@ export default function WordToPDFPage() {
             )}
           </div>
         </div>
-         <section className="mt-10">
+        {/* Footer Navigation section */}
+        <section className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PDF_TOOLS.map((tool) => (
               <Link
@@ -155,17 +181,11 @@ export default function WordToPDFPage() {
                 href={tool.href}
                 className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:-translate-y-1"
               >
-                <div
-                  className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center mb-6`}
-                >
+                <div className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center mb-6`}>
                   <tool.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-red-600">
-                  {tool.name}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {tool.desc}
-                </p>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-red-600">{tool.name}</h3>
+                <p className="text-gray-500 text-sm">{tool.desc}</p>
               </Link>
             ))}
           </div>
