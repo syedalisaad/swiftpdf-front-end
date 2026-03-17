@@ -1,6 +1,8 @@
 import { 
   Merge, Scissors, FileText, FileType, 
-  Presentation, TableProperties, Image as ImageIcon, FileOutput, FileSliders
+  Presentation, TableProperties, Image as ImageIcon, FileOutput, FileSliders,
+  FileSpreadsheet,
+  FilePenLine
 } from 'lucide-react';
 
 export const PDF_TOOLS = [
@@ -61,6 +63,14 @@ export const PDF_TOOLS = [
     color: 'bg-green-50 text-green-600' 
   },
   { 
+    id: 'pdf-to-excel',
+    name: 'PDF to Excel', 
+    desc: 'Extract tables from PDF to Excel', 
+    icon: FileSpreadsheet, 
+    href: '/pdf-to-excel', 
+    color: 'bg-emerald-50 text-emerald-600' 
+  },
+  { 
     id: 'image-to-pdf',
     name: 'Image to PDF', 
     desc: 'Convert Image to PDF', 
@@ -76,4 +86,12 @@ export const PDF_TOOLS = [
     href: '/pdf-to-image', 
     color: 'bg-pink-50 text-pink-600' 
   },
+  { 
+  id: 'pdf-editor',
+  name: 'Edit PDF', 
+  desc: 'Edit text, images, and pages in your PDF', 
+  icon: FilePenLine, 
+  href: '/edit-pdf', 
+  color: 'bg-red-50 text-red-700' 
+}
 ];

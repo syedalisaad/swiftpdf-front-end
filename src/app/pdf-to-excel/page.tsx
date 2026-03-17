@@ -2,22 +2,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  FileOutput,
+  FileSpreadsheet, // Replaced TableProperties for the specific tool
   ArrowLeft,
   FilePlus,
   Loader2,
   Download,
   RefreshCw,
-  Zap,
-  Image as ImageIcon,
+  Search, // For "Scanning Tables" feel
+  CheckCircle,
 } from "lucide-react";
 import ToolHeader from "@/src/components/tools/ToolHeader";
 import FileCard from "@/src/components/tools/FileCard";
-import { uploadFile } from "@/src/lib/api";
 import { PDF_TOOLS } from "@/src/config/tools";
+import { uploadFile } from "@/src/lib/api";
 import { toast } from "sonner";
 
-export default function PDFToImagePage() {
+export default function PDFToExcelPage() {
   const [file, setFile] = useState<File | null>(null);
   const [status, setStatus] = useState<"idle" | "processing" | "success">(
     "idle",
@@ -27,7 +27,10 @@ export default function PDFToImagePage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedFile = e.target.files[0];
-      if (selectedFile.type === "application/pdf") {
+      const extension = selectedFile.name.split(".").pop()?.toLowerCase();
+
+      // Change validation to PDF
+      if (extension === "pdf") {
         setFile(selectedFile);
       } else {
         alert("Please select a valid PDF file.");
@@ -43,17 +46,19 @@ export default function PDFToImagePage() {
     formData.append("file", file);
 
     try {
-      const blob = await uploadFile("/pdf-to-image", formData);
+      const blob = await uploadFile("/pdf-to-excel", formData);
       const url = window.URL.createObjectURL(blob);
+
       setDownloadUrl(url);
       setStatus("success");
-      toast.error('Convert PDF to Image',{
-        description:"File has been converted."
-      })
+      toast.success("Excel Complete", {
+        description: "Your File has been completely converted",
+      });
     } catch (error) {
-      toast.error('Server Error',{
-        description:"Error converting PDF to images."
-      })
+      console.error(error);
+      toast.error("Server Error", {
+        description: "No tables found or conversion failed",
+      });
       setStatus("idle");
     }
   };
@@ -83,9 +88,9 @@ export default function PDFToImagePage() {
 
         <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
           <ToolHeader
-            title="PDF to Image"
-            description="Extract every page of your PDF as a high-quality JPG image instantly."
-            Icon={FileOutput}
+            title="PDF to Excel"
+            description="Our AI scans your PDF for tables and converts them into editable Excel spreadsheets."
+            Icon={FileSpreadsheet}
           />
 
           <div className="p-6 md:p-10">
@@ -110,8 +115,8 @@ export default function PDFToImagePage() {
                       <h2 className="text-2xl font-bold text-gray-800 mb-2">
                         Select PDF file
                       </h2>
-                      <p className="text-gray-400 font-medium">
-                        We'll turn each page into a JPG
+                      <p className="text-gray-400 font-medium text-center">
+                        Upload the PDF containing tables
                       </p>
                     </label>
                   </div>
@@ -125,15 +130,15 @@ export default function PDFToImagePage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="bg-red-50/50 p-4 rounded-2xl border border-red-100 flex items-center gap-3">
-                        <Zap className="text-red-600" size={20} />
+                        <Search className="text-red-600" size={20} />
                         <p className="text-xs font-semibold text-red-800">
-                          High-Speed Extraction
+                          Deep Table Recognition
                         </p>
                       </div>
                       <div className="bg-red-50/50 p-4 rounded-2xl border border-red-100 flex items-center gap-3">
-                        <ImageIcon className="text-red-600" size={20} />
+                        <CheckCircle className="text-red-600" size={20} />
                         <p className="text-xs font-semibold text-red-800">
-                          300 DPI Clear Quality
+                          Multi-Sheet Extraction
                         </p>
                       </div>
                     </div>
@@ -142,55 +147,71 @@ export default function PDFToImagePage() {
                       onClick={handleConvert}
                       className="w-full py-5 bg-red-600 text-white rounded-2xl font-extrabold text-xl shadow-xl shadow-red-100 hover:bg-red-700 transition-all active:scale-95 flex items-center justify-center gap-3"
                     >
-                      Extract Images
+                      Extract to Excel
                     </button>
                   </div>
                 )}
               </div>
             )}
 
+            {/* Processing State */}
             {status === "processing" && (
               <div className="py-20 text-center space-y-6">
-                <Loader2
-                  className="animate-spin text-red-500 mx-auto"
-                  size={64}
-                />
-                <h2 className="text-2xl font-bold text-gray-800">
-                  Rendering Pages...
-                </h2>
+                <div className="relative w-24 h-24 mx-auto">
+                  <Loader2
+                    className="animate-spin text-red-500 absolute inset-0"
+                    size={96}
+                    strokeWidth={1}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <FileSpreadsheet className="text-red-200" size={32} />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    Scanning for Tables...
+                  </h2>
+                  <p className="text-gray-400 mt-2 font-medium">
+                    Our engine is mapping rows and columns.
+                  </p>
+                </div>
               </div>
             )}
 
+            {/* Success State */}
             {status === "success" && (
               <div className="py-10 text-center animate-in zoom-in-95 duration-500">
-                <div className="w-24 h-24 bg-pink-100 text-pink-600 rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-lg shadow-pink-50">
+                <div className="w-24 h-24 bg-green-100 text-green-600 rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-lg shadow-green-50">
                   <Download size={48} />
                 </div>
                 <h2 className="text-3xl font-black text-gray-800 mb-2">
-                  Images Ready!
+                  Tables Extracted!
                 </h2>
-                <div className="flex flex-col gap-4 max-w-sm mx-auto mt-8">
+                <h2 className="text-3xl font-black text-gray-800 mb-2">
+                  Ready for Download!
+                </h2>
+
+                <div className="flex flex-col gap-4 max-w-sm mx-auto mt-10">
                   {downloadUrl && (
                     <a
                       href={downloadUrl}
-                      download="extracted_images.zip"
-                      className="py-4 bg-pink-600 text-white rounded-2xl font-bold text-lg hover:bg-pink-700 shadow-xl transition-all flex items-center justify-center gap-2"
+                      download={`${file?.name.split(".")[0] || "Extracted_Data"}.xlsx`}
+                      className="py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 shadow-xl shadow-green-200 transition-all flex items-center justify-center gap-2 text-center"
                     >
-                      <Download size={20} /> Download ZIP
+                      <Download size={20} /> Download Excel
                     </a>
                   )}
                   <button
                     onClick={reset}
-                    className="flex items-center justify-center gap-2 text-gray-400 hover:text-red-600 font-bold text-sm transition-colors py-4"
+                    className="flex items-center justify-center gap-2 text-gray-400 hover:text-red-600 font-bold text-sm uppercase tracking-widest transition-colors py-4"
                   >
-                    <RefreshCw size={16} /> Process Another PDF
+                    <RefreshCw size={16} /> Convert Another PDF
                   </button>
                 </div>
               </div>
             )}
           </div>
         </div>
-
         <section className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PDF_TOOLS.map((tool) => (
