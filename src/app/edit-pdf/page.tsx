@@ -191,22 +191,25 @@ export default function TalentBeesProEditor() {
 
   const saveSignature = () => {
     if (sigPad.current.isEmpty()) return;
+
+    // Get the base64 string
     const dataUrl = sigPad.current.getTrimmedCanvas().toDataURL("image/png");
+
     const id = `sig-${Date.now()}`;
     nodeRefs.current[id] = createRef<HTMLDivElement>();
-    setAnnotations([
-      ...annotations,
-      {
-        id,
-        page: pageNumber,
-        text: dataUrl,
-        x: 20,
-        y: 20,
-        w: 25,
-        h: 12,
-        type: "signature",
-      },
-    ]);
+
+    const newAnnotation = {
+      id,
+      page: pageNumber,
+      text: dataUrl, // This holds the base64 string
+      x: 20,
+      y: 20,
+      w: 25,
+      h: 12,
+      type: "signature",
+    };
+
+    setAnnotations((prev) => [...prev, newAnnotation]);
     setShowSigModal(false);
   };
 
