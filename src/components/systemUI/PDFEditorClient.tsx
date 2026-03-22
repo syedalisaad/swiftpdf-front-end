@@ -18,6 +18,7 @@ import dynamic from "next/dynamic";
 import SignatureCanvas from "react-signature-canvas";
 import RelatedTools from "../tools/RelatedTools";
 import FeatureBenefits from "../tools/FeatureBenefits";
+import AdBanner from "../tools/AdBanner";
 
 const Document = dynamic(
   () => import("react-pdf").then((mod) => mod.Document),
@@ -251,6 +252,12 @@ export default function PDFEditorClient() {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] py-12 px-4 font-sans">
+      <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
       <div className="flex h-screen bg-[#F8FAFC] overflow-hidden">
         {/* Sidebar */}
         <aside className="w-20 bg-white border-r border-slate-200 flex flex-col items-center py-6 gap-6 z-50">
@@ -596,6 +603,12 @@ export default function PDFEditorClient() {
             </div>
           </div>
         )}
+      </div>
+      <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
       </div>
       <RelatedTools />
       <FeatureBenefits />

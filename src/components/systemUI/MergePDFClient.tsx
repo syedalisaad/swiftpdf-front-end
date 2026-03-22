@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { uploadFile } from "@/src/lib/api";
 import RelatedTools from "../tools/RelatedTools";
 import FeatureBenefits from "../tools/FeatureBenefits";
+import AdBanner from "../tools/AdBanner";
 
 export default function MergePDFClient() {
   const [files, setFiles] = useState<File[]>([]);
@@ -82,6 +83,12 @@ export default function MergePDFClient() {
             All Tools
           </span>
         </Link>
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
 
         <div className="bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100">
           <ToolHeader
@@ -205,6 +212,12 @@ export default function MergePDFClient() {
             )}
           </div>
         </div>
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
 
         <RelatedTools />
         <FeatureBenefits />

@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { uploadFile } from "@/src/lib/api";
 import RelatedTools from "../tools/RelatedTools";
 import FeatureBenefits from "../tools/FeatureBenefits";
+import AdBanner from "../tools/AdBanner";
 
 export default function SplitPDFClient() {
   const [file, setFile] = useState<File | null>(null);
@@ -36,7 +37,7 @@ export default function SplitPDFClient() {
     formData.append("range", range);
 
     try {
-      const blob =  await uploadFile("/word-to-pdf", formData);
+      const blob = await uploadFile("/word-to-pdf", formData);
       const url = window.URL.createObjectURL(blob);
       setDownloadUrl(url);
       setStatus("success");
@@ -68,7 +69,12 @@ export default function SplitPDFClient() {
             All Tools
           </span>
         </Link>
-
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
         <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
           <ToolHeader
             title="Split PDF"
@@ -189,8 +195,14 @@ export default function SplitPDFClient() {
             )}
           </div>
         </div>
-          <RelatedTools/>
-                <FeatureBenefits/>
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
+        <RelatedTools />
+        <FeatureBenefits />
       </div>
     </div>
   );

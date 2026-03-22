@@ -17,6 +17,7 @@ import { PDF_TOOLS } from "@/src/config/tools";
 import { uploadFile } from "@/src/lib/api";
 import RelatedTools from "../tools/RelatedTools";
 import FeatureBenefits from "../tools/FeatureBenefits";
+import AdBanner from "../tools/AdBanner";
 
 export default function ExcelToPDFClient() {
   const [file, setFile] = useState<File | null>(null);
@@ -81,6 +82,13 @@ export default function ExcelToPDFClient() {
             All Tools
           </span>
         </Link>
+
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
 
         <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
           <ToolHeader
@@ -211,6 +219,12 @@ export default function ExcelToPDFClient() {
             )}
           </div>
         </div>
+        <div className="mb-8 border-b border-gray-50 pb-4">
+        <AdBanner 
+          dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
+          dataAdFormat="horizontal" 
+        />
+      </div>
         <RelatedTools />
         <FeatureBenefits />
       </div>
