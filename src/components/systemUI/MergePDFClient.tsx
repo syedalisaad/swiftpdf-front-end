@@ -14,6 +14,8 @@ import FileCard from "@/src/components/tools/FileCard";
 import { PDF_TOOLS } from "@/src/config/tools";
 import { toast } from "sonner";
 import { uploadFile } from "@/src/lib/api";
+import RelatedTools from "../tools/RelatedTools";
+import FeatureBenefits from "../tools/FeatureBenefits";
 
 export default function MergePDFClient() {
   const [files, setFiles] = useState<File[]>([]);
@@ -204,69 +206,8 @@ export default function MergePDFClient() {
           </div>
         </div>
 
-        <section className="mt-20">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center text-red-500 mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                <ShieldCheck size={28} />
-              </div>
-              <h4 className="font-black text-gray-800 mb-3 text-lg">
-                Safe & Secure
-              </h4>
-              <p className="text-gray-500 leading-relaxed text-sm">
-                Military-grade encryption for your documents. We delete
-                everything within 1 hour.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center text-orange-500 mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                <Zap size={28} />
-              </div>
-              <h4 className="font-black text-gray-800 mb-3 text-lg">
-                Swift Engine
-              </h4>
-              <p className="text-gray-500 leading-relaxed text-sm">
-                Powered by high-performance servers to merge hundreds of pages
-                in milliseconds.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center text-purple-500 mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                <Sparkles size={28} />
-              </div>
-              <h4 className="font-black text-gray-800 mb-3 text-lg">
-                Pro Features
-              </h4>
-              <p className="text-gray-500 leading-relaxed text-sm">
-                Perfect formatting, table of contents retention, and
-                high-resolution output.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PDF_TOOLS.map((tool) => (
-              <Link
-                key={tool.name}
-                href={tool.href}
-                className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:-translate-y-1"
-              >
-                <div
-                  className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center mb-6`}
-                >
-                  <tool.icon size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-red-600">
-                  {tool.name}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {tool.desc}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <RelatedTools />
+        <FeatureBenefits />
       </div>
     </div>
   );

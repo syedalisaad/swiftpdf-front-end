@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import SignatureCanvas from "react-signature-canvas";
+import RelatedTools from "../tools/RelatedTools";
+import FeatureBenefits from "../tools/FeatureBenefits";
 
 const Document = dynamic(
   () => import("react-pdf").then((mod) => mod.Document),
@@ -248,6 +250,7 @@ export default function PDFEditorClient() {
   if (!mounted) return null;
 
   return (
+    <div  className="min-h-screen bg-[#F9FAFB] py-12 px-4 font-sans">
     <div className="flex h-screen bg-[#F8FAFC] overflow-hidden">
       {/* Sidebar */}
       <aside className="w-20 bg-white border-r border-slate-200 flex flex-col items-center py-6 gap-6 z-50">
@@ -588,6 +591,9 @@ export default function PDFEditorClient() {
           </div>
         </div>
       )}
+      
     </div>
+    <RelatedTools />
+      <FeatureBenefits /></div>
   );
 }
