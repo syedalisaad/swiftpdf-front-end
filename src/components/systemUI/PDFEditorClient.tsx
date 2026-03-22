@@ -113,7 +113,7 @@ export default function PDFEditorClient() {
     formData.append("pdf", uploadedFile);
 
     try {
-      const res = await fetch("http://localhost:8000/analyze-pdf", {
+      const res = await fetch("https://api.swiftpdf.cloud/analyze-pdf", {
         method: "POST",
         body: formData,
       });
@@ -231,7 +231,7 @@ export default function PDFEditorClient() {
     formData.append("pdf", originalFile);
     formData.append("updates", JSON.stringify(annotations));
     try {
-      const res = await fetch("http://localhost:8000/process-pdf", {
+      const res = await fetch("https://api.swiftpdf.cloud/process-pdf", {
         method: "POST",
         body: formData,
       });

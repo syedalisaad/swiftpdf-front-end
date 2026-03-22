@@ -37,7 +37,7 @@ export default function MergePDFClient() {
     files.forEach((file) => formData.append("files", file));
 
     try {
-      const blob = await uploadFile("/word-to-pdf", formData);
+      const blob = await uploadFile("/merge-pdfs", formData);
       const url = window.URL.createObjectURL(blob);
 
       setDownloadUrl(url);

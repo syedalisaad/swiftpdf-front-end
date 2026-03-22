@@ -37,7 +37,7 @@ export default function SplitPDFClient() {
     formData.append("range", range);
 
     try {
-      const blob = await uploadFile("/word-to-pdf", formData);
+      const blob = await uploadFile("/split-pdf", formData);
       const url = window.URL.createObjectURL(blob);
       setDownloadUrl(url);
       setStatus("success");
