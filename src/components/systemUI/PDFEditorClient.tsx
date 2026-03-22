@@ -252,7 +252,7 @@ export default function PDFEditorClient() {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] py-12 px-4 font-sans">
-      <div className="mb-8 border-b border-gray-50 pb-4">
+      <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner 
           dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
           dataAdFormat="horizontal" 
@@ -604,7 +604,7 @@ export default function PDFEditorClient() {
           </div>
         )}
       </div>
-      <div className="mb-8 border-b border-gray-50 pb-4">
+      <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner 
           dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
           dataAdFormat="horizontal" 

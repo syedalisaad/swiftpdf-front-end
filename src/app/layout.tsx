@@ -3,6 +3,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftpdf.cloud"),
@@ -18,12 +19,12 @@ export const metadata: Metadata = {
   other: {
     "google-adsense-account": "ca-pub-8729012662530579",
   },
-   verification: {
+  verification: {
     other: {
       "google-adsense-account": "ca-pub-8729012662530579",
     },
   },
-  
+
   // --------------------------------------------
   openGraph: {
     title: "SwiftPDF - All-in-One PDF Utility",
@@ -63,7 +64,6 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar />
-
         <main>
           {/* Google Analytics */}
           <Script
@@ -78,10 +78,10 @@ export default function RootLayout({
               gtag('config', 'G-YS2SBK1EW3');
             `}
           </Script>
-          
+
           {children}
         </main>
-
+        <Footer /> {/* Footer is now global */}
         <Toaster position="top-center" richColors />
       </body>
     </html>

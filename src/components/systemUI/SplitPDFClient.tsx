@@ -69,7 +69,7 @@ export default function SplitPDFClient() {
             All Tools
           </span>
         </Link>
-        <div className="mb-8 border-b border-gray-50 pb-4">
+        <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner 
           dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
           dataAdFormat="horizontal" 
@@ -195,7 +195,7 @@ export default function SplitPDFClient() {
             )}
           </div>
         </div>
-        <div className="mb-8 border-b border-gray-50 pb-4">
+        <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner 
           dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
           dataAdFormat="horizontal" 
