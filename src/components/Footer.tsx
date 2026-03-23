@@ -57,7 +57,7 @@ export default function Footer() {
               Resources
             </h3>
             <Link
-              href="/sitemap"
+              href="/site-map"
               className="text-sm text-gray-500 hover:text-red-600 transition-colors"
             >
               Site Map (All Tools)
