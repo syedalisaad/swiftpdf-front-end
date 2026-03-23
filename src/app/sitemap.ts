@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Generate URLs for all your PDF tools dynamically
   const toolUrls = PDF_TOOLS.map((tool) => ({
-    url: `${baseUrl}`,
+    url: `${baseUrl}${tool.href}`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'monthly' as const, // Tools don't change often
     priority: 0.8,
