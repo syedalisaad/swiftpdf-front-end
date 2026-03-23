@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "google-adsense-account": "ca-pub-8729012662530579",
+      "google-site-verification": "google-site-verification=dOp04UQ4KkikaV76g1f9I5eE-RDuKkUUsYayp05heYw",
     },
   },
 
@@ -93,6 +94,26 @@ export default function RootLayout({
           </Script>
 
           {children}
+
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "swiftpdf PDF",
+            "description": "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
+            "url": "https://swiftpdf.cloud",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "USD"
+            }
+          })
+        }}
+      />
         </main>
         <Footer /> {/* Footer is now global */}
         <Toaster position="top-center" richColors />

@@ -2,67 +2,13 @@ import RelatedTools from '../components/tools/RelatedTools';
 import FeatureBenefits from '../components/tools/FeatureBenefits';
 import { Sparkles } from 'lucide-react';
 
-export const metadata = {
-  title: 'Free PDF Tools Online | Merge, Split & Convert PDFs | swiftpdf',
-  description: 'Fast, secure, and free online PDF tools. Merge, split, compress, and convert PDF documents to Word, Excel, and images without software installation.',
-  keywords: [
-    "PDF Tools",
-    "merge PDF",
-    "Split PDF",
-    "Word to PDF",
-    "PDF to word",
-    "excel to PDF",
-    "pdf to excel",
-    "image to PDF",
-    "pdf to image",
-    "Free PDF Editor",
-    "Online PDF Converter",
-    "ATS Resume Checker",
-  ],
-  alternates: {
-    canonical: 'https://swiftpdf.cloud',
-  },
-   // --------------------------------------------
-  openGraph: {
-    title: "SwiftPDF - All-in-One PDF Utility",
-    description: "Secure and lightning-fast PDF processing in your browser.",
-    url: "https://swiftpdf.cloud",
-    siteName: "SwiftPDF",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SwiftPDF.cloud",
-    description: "Process PDFs in seconds, not minutes.",
-  },
-};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50/50 pb-20 selection:bg-red-100 selection:text-red-900">
       
       {/* 2. Structured JSON-LD Schema (Tells Google exactly what this web app is) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "swiftpdf PDF",
-            "description": "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
-            "url": "https://swiftpdf.cloud",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          })
-        }}
-      />
+    
 
       <div className="max-w-6xl mx-auto px-4 pt-16">
         
