@@ -22,6 +22,11 @@ export default function Footer() {
             <Link href="/about" className="text-sm text-gray-500 hover:text-red-600 transition-colors">About Us</Link>
             <Link href="/contact" className="text-sm text-gray-500 hover:text-red-600 transition-colors">Contact</Link>
           </div>
+          <div className="flex flex-col space-y-3">
+            <h3 className="font-bold text-gray-800 text-xs uppercase tracking-widest mb-2">Resources</h3>
+            <Link href="/sitemap" className="text-sm text-gray-500 hover:text-red-600 transition-colors">Site Map (All Tools)</Link>
+            <Link href="/sitemap.xml" className="text-sm text-gray-500 hover:text-red-600 transition-colors">XML Sitemap</Link>
+          </div>
 
           {/* Legal - CRITICAL FOR ADSENSE */}
           <div className="flex flex-col space-y-3">
