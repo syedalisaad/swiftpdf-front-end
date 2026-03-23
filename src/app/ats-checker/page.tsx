@@ -38,7 +38,7 @@ export default function ATSPage() {
             AI Powered Analysis
           </span>
           <h1 className="text-5xl font-black text-gray-900 mb-4 tracking-tight">
-            ATS Resume <span className="text-cyan-600">Checker</span>
+            ATS Resume <span className="text-red-600">Checker</span>
           </h1>
           <h2 className="text-gray-500 text-lg max-w-2xl mx-auto font-normal">
   Boost your <strong>interview chances</strong> by optimizing your CV for 
