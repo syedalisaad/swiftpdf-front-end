@@ -1,7 +1,7 @@
 // app/privacy-policy/page.tsx
 export default function PrivacyPolicy() {
   return (
-    <main className="max-w-4xl mx-auto py-20 px-6 text-gray-700 leading-relaxed">
+    <div className="max-w-4xl mx-auto py-20 px-6 text-gray-700 leading-relaxed">
       <h1 className="text-4xl font-black mb-8 text-gray-900">Privacy Policy</h1>
       <p className="mb-4">Last Updated: March 2026</p>
       
@@ -17,6 +17,6 @@ export default function PrivacyPolicy() {
         <h2 className="text-2xl font-bold mt-8">Document Privacy</h2>
         <p>We do not store your documents. All files uploaded to SwiftPDF are processed in-browser or via secure temporary server sessions and are automatically deleted within one hour of processing. We do not look at, copy, or share your data.</p>
       </section>
-    </main>
+    </div>
   );
 }

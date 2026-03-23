@@ -1,7 +1,7 @@
 // app/about/page.tsx
 export default function AboutPage() {
   return (
-    <main className="max-w-4xl mx-auto py-20 px-6">
+    <div className="max-w-4xl mx-auto py-20 px-6">
       <h1 className="text-4xl font-black mb-8 text-gray-900 text-center">About SwiftPDF</h1>
       <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm space-y-6 text-gray-600">
         <p className="text-lg">
@@ -18,6 +18,6 @@ export default function AboutPage() {
           <p className="text-sm text-gray-400 mt-2">Response time: Usually within 24–48 hours.</p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

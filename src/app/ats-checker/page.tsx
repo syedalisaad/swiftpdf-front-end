@@ -33,7 +33,7 @@ const jsonLd = {
 
 export default function ATSPage() {
   return (
-    <main className="min-h-screen bg-[#F9FAFB] py-16">
+    <div className="min-h-screen bg-[#F9FAFB] py-16">
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-12 text-center">
           <span className="px-4 py-1.5 bg-cyan-100 text-cyan-700 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">
@@ -57,6 +57,6 @@ export default function ATSPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    </main>
+    </div>
   );
 }
