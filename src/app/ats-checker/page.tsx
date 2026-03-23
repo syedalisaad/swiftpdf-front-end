@@ -1,10 +1,11 @@
 import ATSChecker from "@/src/components/systemUI/ATSChecker";
 
 export const metadata = {
-  title: 'Free ATS Resume Checker | Score & Optimize Your CV | TalentBees',
-  description: 'Get an instant ATS compatibility score. Our free tool analyzes your resume against job descriptions to identify missing keywords and boost your hiring chances.',
+  title: "Free ATS Resume Checker | Score & Optimize Your CV | TalentBees",
+  description:
+    "Get an instant ATS compatibility score. Our free tool analyzes your resume against job descriptions to identify missing keywords and boost your hiring chances.",
   alternates: {
-    canonical: 'https://swiftpdf.cloud/ats-checker', 
+    canonical: "https://swiftpdf.cloud/ats-checker",
   },
   keywords: [
     "ATS resume checker",
@@ -15,18 +16,19 @@ export const metadata = {
   ],
 };
 
- const jsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "TalentBees ATS Resume Checker",
-  "url": "https://swiftpdf.cloud/ats-checker",
-  "applicationCategory": "BusinessApplication",
-  "offers": {
+  name: "TalentBees ATS Resume Checker",
+  url: "https://swiftpdf.cloud/ats-checker",
+  applicationCategory: "BusinessApplication",
+  offers: {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
+    price: "0",
+    priceCurrency: "USD",
   },
-  "description": "Analyze your resume against job descriptions to get an ATS compatibility score."
+  description:
+    "Analyze your resume against job descriptions to get an ATS compatibility score.",
 };
 
 export default function ATSPage() {
@@ -41,20 +43,20 @@ export default function ATSPage() {
             ATS Resume <span className="text-red-600">Checker</span>
           </h1>
           <h2 className="text-gray-500 text-lg max-w-2xl mx-auto font-normal">
-  Boost your <strong>interview chances</strong> by optimizing your CV for 
-  Applicant Tracking Systems. Our AI scanner identifies <strong>missing skills </strong> 
-  and formatting issues in seconds.
-</h2>
+            Boost your <strong>interview chances</strong> by optimizing your CV
+            for Applicant Tracking Systems. Our AI scanner identifies{" "}
+            <strong>missing skills </strong>
+            and formatting issues in seconds.
+          </h2>
         </header>
 
         <ATSChecker />
       </div>
-     
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-/>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </main>
   );
 }
