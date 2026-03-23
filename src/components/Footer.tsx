@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="mt-20 border-t border-gray-100 bg-white pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div className="space-y-4">
             <h2 className="text-xl font-black text-gray-900">SwiftPDF</h2>
