@@ -8,25 +8,46 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftpdf.cloud"),
   title: {
-    default: "SwiftPDF - Fast, Secure & Free Online PDF Tools",
+    default: "Free Online PDF Tools (Merge, Split, Convert) – SwiftPDF",
     template: "%s | SwiftPDF.cloud",
   },
   description:
     "The fastest way to manage your PDF files. Split, Merge, Convert and Edit PDFs online for free.",
   keywords: [
-    "PDF Tools",
-    "merge PDF",
-    "Split PDF",
-    "Word to PDF",
-    "PDF to word",
-    "excel to PDF",
-    "pdf to excel",
-    "image to PDF",
-    "pdf to image",
-    "Free PDF Editor",
-    "Online PDF Converter",
-    "ATS Resume Checker",
-  ],
+  // Core
+  "free online PDF tools",
+  "best PDF tools online free",
+  "fast PDF tools without signup",
+
+  // Merge / Split
+  "merge PDF online free without watermark",
+  "split PDF online free fast",
+  "combine PDF files online free",
+
+  // Convert
+  "word to PDF converter free online",
+  "PDF to Word converter no watermark",
+  "excel to PDF converter free",
+  "PDF to excel converter online free",
+  "image to PDF converter free online",
+  "PDF to image converter high quality",
+
+  // Editor
+  "free PDF editor online no signup",
+  "edit PDF online free fast",
+
+  // ATS / AI (your biggest opportunity 🔥)
+  "ATS resume checker free",
+  "AI resume checker online",
+  "resume ATS score checker free",
+  "AI CV analysis tool free",
+
+  // Location-based (VERY POWERFUL)
+  "free PDF tools Pakistan",
+  "best PDF converter 2026",
+  "best PDF converter free no signup 2026",
+  "secure PDF converter online free",
+],
   authors: [{ name: "Syed Ali" }],
 
   other: {
@@ -35,7 +56,7 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "google-adsense-account": "ca-pub-8729012662530579",
-      "google-site-verification": "google-site-verification=dOp04UQ4KkikaV76g1f9I5eE-RDuKkUUsYayp05heYw",
+      "google-site-verification": "dOp04UQ4KkikaV76g1f9I5eE-RDuKkUUsYayp05heYw",
     },
   },
 
@@ -53,6 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SwiftPDF.cloud",
     description: "Process PDFs in seconds, not minutes.",
+    images: ["/og-image.png"], // ADD THIS
   },
   robots: {
     index: true,
@@ -95,25 +117,26 @@ export default function RootLayout({
 
           {children}
 
-            <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "swiftpdf PDF",
-            "description": "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
-            "url": "https://swiftpdf.cloud",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          })
-        }}
-      />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                name: "swiftpdf PDF",
+                description:
+                  "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
+                url: "https://swiftpdf.cloud",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web Browser",
+                offers: {
+                  "@type": "Offer",
+                  price: "0.00",
+                  priceCurrency: "USD",
+                },
+              }),
+            }}
+          />
         </main>
         <Footer /> {/* Footer is now global */}
         <Toaster position="top-center" richColors />
