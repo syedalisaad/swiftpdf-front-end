@@ -48,7 +48,7 @@ export default function ATSChecker() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
       <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner dataAdSlot="YOUR_TOP_AD_SLOT_ID" dataAdFormat="horizontal" />
       </div>
