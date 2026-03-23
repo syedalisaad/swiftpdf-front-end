@@ -2,7 +2,8 @@ import {
   Merge, Scissors, FileText, FileType, 
   Presentation, TableProperties, Image as ImageIcon, FileOutput, FileSliders,
   FileSpreadsheet,
-  FilePenLine
+  FilePenLine,
+  ScanSearch
 } from 'lucide-react';
 
 export const PDF_TOOLS = [
@@ -93,5 +94,13 @@ export const PDF_TOOLS = [
   icon: FilePenLine, 
   href: '/edit-pdf', 
   color: 'bg-red-50 text-red-700' 
-}
+},
+{ 
+    id: 'ats-checker',
+    name: 'ATS Resume Checker', 
+    desc: 'Score your CV against job descriptions', 
+    icon: ScanSearch, 
+    href: '/ats-checker', 
+    color: 'bg-cyan-50 text-cyan-600' 
+  }
 ];

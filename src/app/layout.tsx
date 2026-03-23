@@ -13,9 +13,22 @@ export const metadata: Metadata = {
   },
   description:
     "The fastest way to manage your PDF files. Split, Merge, Convert and Edit PDFs online for free.",
-  keywords: ["PDF Tools", "merge PDF", "Split PDF", "image to PDF"], // ... (your existing keywords)
+  keywords: [
+    "PDF Tools",
+    "merge PDF",
+    "Split PDF",
+    "Word to PDF",
+    "PDF to word",
+    "excel to PDF",
+    "pdf to excel",
+    "image to PDF",
+    "pdf to image",
+    "Free PDF Editor",
+    "Online PDF Converter",
+    "ATS Resume Checker",
+  ],
   authors: [{ name: "Syed Ali" }],
-  // --- ADDED THE ADSENSE VERIFICATION HERE ---
+
   other: {
     "google-adsense-account": "ca-pub-8729012662530579",
   },
