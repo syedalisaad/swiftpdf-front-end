@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { Upload, AlertCircle, Loader2, X } from "lucide-react";
 import AdBanner from "../tools/AdBanner";
+import RelatedTools from "../tools/RelatedTools";
+import FeatureBenefits from "../tools/FeatureBenefits";
 
 type ResultType = {
   score: number;
@@ -53,17 +55,6 @@ export default function ATSChecker() {
         <AdBanner dataAdSlot="YOUR_TOP_AD_SLOT_ID" dataAdFormat="horizontal" />
       </div>
       <div className="max-w-5xl mx-auto px-4 py-16">
-        {/* HEADER */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-red-600">
-            ATS Resume Checker
-          </h1>
-          <p className="text-gray-400 mt-3">
-            Analyze your resume against job descriptions and improve your match
-            score.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT: FORM */}
           <form
@@ -200,44 +191,46 @@ transition-all duration-200 resize-none"
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto mt-20 space-y-10 text-gray-300">
-  
-  <section>
-    <h2 className="text-2xl font-bold text-gray-600 mb-3">
-      What is an ATS Resume Checker?
-    </h2>
-    <p className="text-gray-600">
-      An ATS (Applicant Tracking System) is software used by companies to filter resumes.
-      Our ATS resume checker scans your CV and compares it with job descriptions to ensure
-      your resume passes automated screening systems.
-    </p>
-  </section>
-
-  <section>
-    <h2 className="text-2xl font-bold text-gray-600 mb-3">
-      How to Improve Your ATS Score
-    </h2>
-    <ul className="list-disc pl-5 space-y-2 text-gray-600">
-      <li>Use keywords from the job description</li>
-      <li>Avoid images and complex layouts</li>
-      <li>Use standard headings like "Experience"</li>
-      <li>Include measurable achievements</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 className="text-2xl font-bold text-gray-600 mb-3">
-      Why ATS Optimization Matters
-    </h2>
-    <p className="text-gray-600">
-      Over 90% of companies use ATS software to filter candidates. If your resume
-      is not optimized, it may never reach a recruiter. This tool helps you fix that.
-    </p>
-  </section>
-
-</div>
       <div className="mb-2 border-b border-gray-50 pb-4">
         <AdBanner dataAdSlot="YOUR_TOP_AD_SLOT_ID" dataAdFormat="horizontal" />
+      </div>
+      <RelatedTools />
+      <FeatureBenefits />
+      <div className="max-w-4xl mx-auto mt-20 space-y-10 text-gray-300">
+        <section>
+          <h2 className="text-2xl font-bold text-gray-600 mb-3">
+            What is an ATS Resume Checker?
+          </h2>
+          <p className="text-gray-600">
+            An ATS (Applicant Tracking System) is software used by companies to
+            filter resumes. Our ATS resume checker scans your CV and compares it
+            with job descriptions to ensure your resume passes automated
+            screening systems.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-gray-600 mb-3">
+            How to Improve Your ATS Score
+          </h2>
+          <ul className="list-disc pl-5 space-y-2 text-gray-600">
+            <li>Use keywords from the job description</li>
+            <li>Avoid images and complex layouts</li>
+            <li>Use standard headings like "Experience"</li>
+            <li>Include measurable achievements</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-gray-600 mb-3">
+            Why ATS Optimization Matters
+          </h2>
+          <p className="text-gray-600">
+            Over 90% of companies use ATS software to filter candidates. If your
+            resume is not optimized, it may never reach a recruiter. This tool
+            helps you fix that.
+          </p>
+        </section>
       </div>
     </div>
   );
