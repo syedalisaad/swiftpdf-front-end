@@ -19,9 +19,9 @@ export default function ToolHeader({ title, description, Icon }: ToolHeaderProps
         <div className="p-3 bg-white/20 backdrop-blur-md rounded-2xl mb-4 border border-white/30">
           <Icon size={28} />
         </div>
-        <h3 className="text-4xl font-extrabold tracking-tight mb-2 uppercase">
+        <p className="text-4xl font-extrabold tracking-tight mb-2 uppercase">
           {title}
-        </h3>
+        </p>
         <p className="text-black-50 text-lg  opacity-90 max-w-md font-medium">
           {description}
         </p>
