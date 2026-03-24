@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /temp_pdf_storage/
+
+Sitemap: https://swiftpdf.cloud/sitemap.xml
