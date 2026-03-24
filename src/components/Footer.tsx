@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Linkedin } from "lucide-react"; // Make sure lucide-react is installed
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="mt-20 border-t border-gray-100 bg-white pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {" "}
+          
           {/* Brand Info */}
           <div className="space-y-4">
             <h2 className="text-xl font-black text-gray-900">SwiftPDF</h2>
@@ -16,10 +17,11 @@ export default function Footer() {
               directly in your browser for maximum privacy.
             </p>
           </div>
-          {/* Navigation */}
+
+          {/* Navigation & Contact */}
           <div className="flex flex-col space-y-3">
             <h3 className="font-bold text-gray-800 text-xs uppercase tracking-widest mb-2">
-              Company
+              Support
             </h3>
             <Link
               href="/about"
@@ -31,9 +33,23 @@ export default function Footer() {
               href="/contact"
               className="text-sm text-gray-500 hover:text-red-600 transition-colors"
             >
-              Contact
+              Contact Support
             </Link>
+            {/* The "Best Way" Call to Action */}
+            <div className="pt-2">
+              <p className="text-[11px] font-bold text-gray-400 uppercase mb-1">Report Issues:</p>
+              <a 
+                href="https://www.linkedin.com/company/swift-pdf-cloud" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+              >
+                <Linkedin size={16} />
+                DM on LinkedIn
+              </a>
+            </div>
           </div>
+
           {/* Legal - CRITICAL FOR ADSENSE */}
           <div className="flex flex-col space-y-3">
             <h3 className="font-bold text-gray-800 text-xs uppercase tracking-widest mb-2">
@@ -52,6 +68,8 @@ export default function Footer() {
               Terms of Service
             </Link>
           </div>
+
+          {/* Resources & SEO */}
           <div className="flex flex-col space-y-3">
             <h3 className="font-bold text-gray-800 text-xs uppercase tracking-widest mb-2">
               Resources
@@ -64,6 +82,7 @@ export default function Footer() {
             </Link>
             <Link
               href="/sitemap.xml"
+              target="_blank"
               className="text-sm text-gray-500 hover:text-red-600 transition-colors"
             >
               XML Sitemap
@@ -77,7 +96,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-400">
-            © {currentYear} SwiftPDF.cloud. All rights reserved.
+            © {currentYear} SwiftPDF.cloud. 
           </p>
           <div className="flex gap-4 text-[10px] font-bold text-gray-300 uppercase tracking-tighter">
             <span>Secure SSL</span>
