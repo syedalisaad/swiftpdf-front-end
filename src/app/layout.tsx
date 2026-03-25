@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     default: "Free Online PDF Tools (Merge, Split, Convert) – SwiftPDF",
     template: "%s | SwiftPDF.cloud",
   },
+  
   description:
     "The fastest way to manage your PDF files. Split, Merge, Convert and Edit PDFs online for free.",
   keywords: [
@@ -36,18 +37,19 @@ export const metadata: Metadata = {
   "free PDF editor online no signup",
   "edit PDF online free fast",
 
-  // ATS / AI (your biggest opportunity 🔥)
   "ATS resume checker free",
   "AI resume checker online",
   "resume ATS score checker free",
   "AI CV analysis tool free",
 
-  // Location-based (VERY POWERFUL)
   "free PDF tools Pakistan",
   "best PDF converter 2026",
   "best PDF converter free no signup 2026",
   "secure PDF converter online free",
 ],
+ alternates: {
+    canonical: "https://swiftpdf.cloud",
+  },
   authors: [{ name: "Syed Ali" }],
 
   other: {
