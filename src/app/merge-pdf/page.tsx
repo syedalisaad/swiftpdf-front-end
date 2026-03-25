@@ -2,8 +2,7 @@ import MergePDFClient from "@/src/components/systemUI/MergePDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // Optimized H1/Title (48 characters)
-  title: "Merge PDF Online - Combine Multiple PDF Files for Free | SwiftPDF",
+  title: "Merge PDF Online - Free & Fast PDF Combiner | SwiftPDF",
   description:
     "Easily combine two or more PDF files into a single document. Secure, fast, and maintains original formatting. No installation required.",
   keywords: [
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/merge-pdf",
   },
   openGraph: {
-    title: "Merge PDF Files Instantly | SwiftPDF",
+    title: "Merge PDF Online - Free & Fast PDF Combiner | SwiftPDF",
     description: "Combine multiple PDFs into one organized file in seconds.",
     url: "https://swiftpdf.cloud/merge-pdf",
     type: "website",
