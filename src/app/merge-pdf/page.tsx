@@ -21,7 +21,12 @@ export const metadata: Metadata = {
     url: "https://swiftpdf.cloud/merge-pdf",
     type: "website",
     images: [
-      { url: "https://swiftpdf.cloud/og-image.png", width: 1200, height: 630 },
+      {
+        url: "https://swiftpdf.cloud/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SwiftPDF Merge Tool Preview",
+      },
     ],
   },
 };
