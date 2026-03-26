@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Optimized H1/Title (56 characters)
-  title: "Convert PDF to PPT Online - Free PDF to PowerPoint Converter | SwiftPDF",
-  description: "Transform your PDF documents into editable PowerPoint slides (PPTX) for free. SwiftPDF ensures high-quality slide generation while preserving layouts and images.",
+  title: "Convert PDF to PowerPoint Online — 100% Free & Fast",
+  description: "Convert PDF to editable PowerPoint (PPTX) for free. SwiftPDF preserves your original layouts, text, and images for professional presentations.",
   keywords: ["pdf to ppt", "pdf to pptx", "convert pdf to powerpoint", "free online pdf converter", "swiftpdf"],
   alternates: {
     canonical: "https://swiftpdf.cloud/pdf-to-ppt",

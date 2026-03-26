@@ -2,7 +2,7 @@ import PDFToImageClient from "@/src/components/systemUI/PDFToImageClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert PDF to Image Online - Free High-Quality JPG & PNG Extraction",
+  title: "PDF to Image Converter — High-Res JPG & PNG | SwiftPDF",
   description: "Convert your PDF pages into high-resolution images instantly. SwiftPDF extracts every page as a clear JPG or PNG while maintaining 300 DPI quality.",
   keywords: ["pdf to image", "pdf to jpg", "extract images from pdf", "pdf to png converter", "online pdf tool"],
   alternates: {

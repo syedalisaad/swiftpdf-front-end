@@ -121,9 +121,9 @@ export default function PDFToExcelClient() {
                       <div className="w-20 h-20 bg-red-100 text-red-600 rounded-3xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
                         <FilePlus size={36} />
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                      <h6 className="text-2xl font-bold text-gray-800 mb-2">
                         Select PDF file
-                      </h2>
+                      </h6>
                       <p className="text-gray-400 font-medium text-center">
                         Upload the PDF containing tables
                       </p>

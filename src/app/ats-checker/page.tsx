@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Free ATS Resume Checker | Score & Optimize Your CV | SwiftPDF",
   description:
-    "Get an instant ATS compatibility score. Our AI scanner analyzes your resume against job descriptions to identify missing keywords and boost your hiring chances.",
+    "Free AI Resume Scanner for an instant ATS score. Analyze your resume against job descriptions to find missing keywords and boost your hiring chances.",
   alternates: {
     canonical: "https://swiftpdf.cloud/ats-checker",
   },
