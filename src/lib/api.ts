@@ -12,5 +12,5 @@ export async function uploadFile(endpoint: string, formData: any, isJson = false
   }
 
   // If we just want the text (JSON), return json. Otherwise, return blob.
-  return isJson ? response.json() : response.blob();
+  return  response.blob();
 }
