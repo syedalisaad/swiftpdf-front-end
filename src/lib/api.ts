@@ -1,4 +1,4 @@
-const API_BASE = 'https://swiftpdf.cloud';
+const API_BASE = 'https://api.swiftpdf.cloud';
 
 export async function uploadFile(endpoint: string, formData: any, isJson = false) {
   const response = await fetch(`${API_BASE}${endpoint}`, {
@@ -12,5 +12,5 @@ export async function uploadFile(endpoint: string, formData: any, isJson = false
   }
 
   // If we just want the text (JSON), return json. Otherwise, return blob.
-  return  response.blob();
+  return isJson ? response.json() : response.blob();
 }
