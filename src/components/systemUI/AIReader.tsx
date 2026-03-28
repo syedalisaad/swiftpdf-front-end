@@ -13,6 +13,7 @@ import RelatedTools from "../tools/RelatedTools";
 import FeatureBenefits from "../tools/FeatureBenefits";
 import AdBanner from "../tools/AdBanner";
 import Link from "next/link";
+import { toast } from "sonner";
 
 interface AIReaderProps {
   mode: "pdf" | "text"; // Pass this to switch UI
@@ -50,12 +51,12 @@ export default function AIReader({ mode }: AIReaderProps) {
     formData.append("file", file);
 
     try {
-      // Logic for File-to-Text via your FastAPI
       const data = await uploadFile("/extract-text", formData, true);
-      console.log(data);
       if (data.text) setText(data.text);
     } catch (error: any) {
-      alert(error.message || "Failed to extract text.");
+      toast.error("Selection Required", {
+        description: error.message || "Failed to extract text.",
+      });
     } finally {
       setLoading(false);
       if (fileInputRef.current) fileInputRef.current.value = "";
