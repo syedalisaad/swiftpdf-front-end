@@ -97,7 +97,7 @@ export default function ExcelToPDFClient() {
             Icon={TableProperties}
           />
 
-          <div >
+          <div className="p-6 md:p-10" >
             {status === "idle" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 {!file ? (

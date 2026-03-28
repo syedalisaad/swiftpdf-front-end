@@ -105,7 +105,7 @@ export default function PDFToPPTClient() {
             Icon={FileSliders}
           />
 
-          <div >
+          <div className="p-6 md:p-10" >
             {(status === "idle" || status === "error") && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 {!file ? (

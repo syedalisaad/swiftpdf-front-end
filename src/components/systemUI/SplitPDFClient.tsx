@@ -82,7 +82,7 @@ export default function SplitPDFClient() {
             Icon={Scissors}
           />
 
-          <div >
+          <div className="p-6 md:p-10" >
             {status === "idle" && (
               <>
                 {!file ? (
