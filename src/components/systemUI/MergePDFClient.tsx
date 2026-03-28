@@ -97,7 +97,7 @@ export default function MergePDFClient() {
             Icon={Merge}
           />
 
-          <div className="p-6 md:p-10">
+          <div >
             <input
               type="file"
               multiple

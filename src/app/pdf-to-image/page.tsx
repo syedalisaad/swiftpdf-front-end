@@ -20,7 +20,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* 1. SEO Header Section (Visible & Semantic) */}
       <section className="bg-white py-16 px-4 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
@@ -34,12 +33,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 2. The Interactive Tool */}
       <section  aria-label="PDF to Image Tool">
         <PDFToImageClient />
       </section>
 
-      {/* 3. Technical Content Section (Fixes "Low Value Content") */}
       <article className="max-w-5xl mx-auto px-6 py-20 border-t border-gray-200 mt-10">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -76,7 +73,6 @@ export default function Page() {
         </div>
       </article>
 
-      {/* 4. Structured Data (JSON-LD) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

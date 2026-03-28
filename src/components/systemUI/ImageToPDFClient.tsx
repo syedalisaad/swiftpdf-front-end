@@ -103,7 +103,7 @@ export default function ImageToPDFClient() {
             Icon={ImageIcon}
           />
 
-          <div className="p-6 md:p-10">
+          <div >
             {status === "idle" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 {files.length === 0 ? (
