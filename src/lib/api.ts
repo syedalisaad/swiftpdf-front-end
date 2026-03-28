@@ -1,4 +1,4 @@
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = 'https://swiftpdf.cloud';
 
 export async function uploadFile(endpoint: string, formData: FormData, isJson = false) {
   const response = await fetch(`${API_BASE}${endpoint}`, {
