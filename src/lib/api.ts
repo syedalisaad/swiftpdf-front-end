@@ -1,6 +1,6 @@
 const API_BASE = 'https://swiftpdf.cloud';
 
-export async function uploadFile(endpoint: string, formData: FormData, isJson = false) {
+export async function uploadFile(endpoint: string, formData: any, isJson = false) {
   const response = await fetch(`${API_BASE}${endpoint}`, {
     method: "POST",
     body: formData,
