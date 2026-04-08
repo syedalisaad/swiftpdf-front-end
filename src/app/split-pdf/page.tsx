@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "extract pdf pages",
     "separate pdf online",
     "free pdf splitter",
-    "swiftpdf",
+    "pdf page extractor",
   ],
   alternates: {
     canonical: "https://swiftpdf.cloud/split-pdf",
