@@ -1,3 +1,4 @@
+import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Linkedin, Mail, MessageSquare } from "lucide-react";
 import { Metadata } from "next";
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gray-50 py-20 px-6">
+    <div className="min-h-screen bg-gray-50 py-20 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">
           How can we <span className="text-red-600">help?</span>
@@ -52,9 +53,12 @@ export default function ContactPage() {
             "As a developer, I personally review every piece of feedback to improve our PDF conversion accuracy. 
             Connecting on LinkedIn helps me understand who my users are so I can build better tools for you."
           </p>
-          <p className="mt-4 font-bold text-blue-900">— Founder, SwiftPDF</p>
+          <p className="mt-4 font-bold text-blue-900">Syed Ali — Founder, SwiftPDF</p>
         </div>
       </div>
-    </main>
+      <div className="mt-10">
+        <FaqSection />
+      </div>
+    </div>
   );
 }

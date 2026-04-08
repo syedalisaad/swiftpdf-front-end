@@ -82,12 +82,16 @@ export default function Page() {
 
         <div className="mt-12 bg-gray-50 p-8 rounded-3xl border border-gray-100">
           <h3 className="text-xl font-bold mb-4">
-            Is it safe to split my PDF here?
+            Is it safe to split my PDF files here?
           </h3>
-          <p className="text-sm text-gray-600">
-            Yes. SwiftPDF uses end-to-end encryption. Your files are processed
-            on our secure FastAPI backend and are automatically deleted within
-            60 minutes. We never store or read your document content.
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Yes. SwiftPDF prioritizes your privacy by using secure processing
+            through our FastAPI backend. Your documents are processed in
+            real-time and are never stored permanently in a database or on our
+            servers. To ensure total confidentiality, all temporary files are
+            automatically purged immediately after processing. We don't require
+            any personal information, sign-ups, or subscriptions—our tools are
+            completely free and secure to use.
           </p>
         </div>
       </article>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "combine pdf files",
     "join pdf documents",
     "online pdf merger",
-    "free pdf tools",
+    "free pdf merger tools",
   ],
   alternates: {
     canonical: "https://swiftpdf.cloud/merge-pdf",
@@ -33,8 +33,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* 1. SEO Header Section - High Impact Keywords */}
+    <div className="min-h-screen bg-gray-50">
       <section className="bg-white py-16 px-4 border-b border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
@@ -53,13 +52,13 @@ export default function Page() {
         <MergePDFClient />
       </section>
 
-      <article className="mt-20 max-w-4xl mx-auto">
+      <article className="pb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">
           How to Merge PDF Files Online
         </h2>
         <ol className="list-decimal pl-5 space-y-2">
           <li>
-            Select the PDF files you want to combine or drag them into the box.
+            Select the PDF files you want to combine or you can drag them into the box.
           </li>
           <li>
             Rearrange the file order by dragging them into your preferred
@@ -71,23 +70,25 @@ export default function Page() {
         <h2 className="text-2xl font-bold mt-10 mb-4">
           Why use SwiftPDF to Combine PDFs?
         </h2>
-
-        <h3 className="text-xl font-semibold mt-6">100% Secure Processing</h3>
+        <h3 className="text-xl font-semibold mt-6">How your files are 100% Secure Processing</h3>
         <p>
-          We value your privacy. Your files are encrypted via SSL and are never
-          stored on our servers longer than 60 minutes.
+          We value your privacy. Your files are encrypted via SSL and SwiftPDF
+          are never stored on our servers longer than 60 minutes and we don't
+          store any of your data in our database and we don't ask for any personal information. All files are automatically deleted after processing, ensuring your documents remain confidential and secure.
         </p>
-
         <h3 className="text-xl font-semibold mt-6">
-          Perfect for ATS Resumes and Reports
+          The perfect free tool—no sign-up or login required.
         </h3>
-        <p>
-          Merging a cover letter with a resume? Our tool preserves formatting,
-          making it ideal for job seekers using our ATS Resume Checker.
+        <p className="text-sm text-slate-500 leading-relaxed">
+          While most websites charge for their PDF merging services, we don't!
+          We believe in providing powerful PDF tools to everyone without
+          barriers. Our free merging service is designed to be accessible and
+          easy to use, with no hidden fees, subscription requirements, or
+          account creation needed. Just upload your files, merge them, and
+          download your combined PDF in seconds.
         </p>
       </article>
 
-      {/* 4. Structured Data (JSON-LD) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -107,6 +108,6 @@ export default function Page() {
           }),
         }}
       />
-    </main>
+    </div>
   );
 }

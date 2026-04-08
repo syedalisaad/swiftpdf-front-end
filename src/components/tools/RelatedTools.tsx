@@ -11,7 +11,7 @@ export default function RelatedTools({ activeTool, hoverColor = "hover:text-red-
   const filteredTools = PDF_TOOLS.filter((tool) => tool.name !== activeTool);
 
   return (
-    <section className="mt-10">
+    <section className="mt-2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredTools.map((tool) => (
           <Link

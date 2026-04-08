@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import ToolHeader from "@/src/components/tools/ToolHeader";
 import FileCard from "@/src/components/tools/FileCard";
-import { PDF_TOOLS } from "@/src/config/tools";
 import { toast } from "sonner";
 import { uploadFile } from "@/src/lib/api";
 import RelatedTools from "../tools/RelatedTools";
