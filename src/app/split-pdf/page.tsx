@@ -93,6 +93,20 @@ export default function Page() {
             any personal information, sign-ups, or subscriptions—our tools are
             completely free and secure to use.
           </p>
+          <h3 className="text-xl font-bold mb-4">
+            Why should I use SwiftPDF to split my documents?
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Unlike many other platforms that limit the number of files you can
+            process or force you to create an account, SwiftPDF offers a truly
+            "no-strings-attached" experience. We provide high-speed splitting
+            with no daily limits and no mandatory sign-ups. Our platform is
+            built on a lightweight architecture, meaning you get your results in
+            seconds without the clutter of heavy tracking scripts or intrusive
+            pop-ups. We offer professional-grade document management for free,
+            making it the ideal choice for students, freelancers, and businesses
+            alike.
+          </p>
         </div>
       </article>
 
