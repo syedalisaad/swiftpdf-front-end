@@ -25,7 +25,7 @@ export default function RelatedTools({ activeTool, hoverColor = "hover:text-red-
             <h3 className={`text-xl font-bold text-gray-800 mb-2 transition-colors ${hoverColor}`}>
               {tool.name}
             </h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-lg leading-relaxed">
               {tool.desc}
             </p>
           </Link>

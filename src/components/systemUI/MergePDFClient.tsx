@@ -69,8 +69,8 @@ export default function MergePDFClient() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9FAFB] py-12 px-4 font-sans">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-[#F9FAFB] py-4 px-4 font-sans">
+      <div className="max-w-5xl mx-auto">
         <Link
           href="/"
           className="inline-flex items-center text-gray-500 hover:text-red-600 mb-8 transition-colors group"
@@ -93,7 +93,7 @@ export default function MergePDFClient() {
         <div className="bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100">
           <ToolHeader
             title="Merge PDF"
-            description="Swiftly combine your PDF files into a single organized document."
+            description="You can put all your PDF files together into one document that's easy to look at. This way you can have all your PDF files in one place. It will be very organized. You can do this with your PDF files quickly."
             Icon={Merge}
           />
 
@@ -117,10 +117,10 @@ export default function MergePDFClient() {
                       <div className="w-20 h-20 bg-red-100 text-red-600 rounded-3xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                         <FilePlus size={36} />
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-gray-800 mb-2">
                         Select your PDF files
                       </h2>
-                      <p className="text-gray-400 font-medium">
+                      <p className="text-gray-400 text-lg font-medium">
                         Click to browse or drop them here
                       </p>
                     </label>

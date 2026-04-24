@@ -1,3 +1,4 @@
+import FaqSection from "@/src/components/systemUI/FaqSection";
 import MergePDFClient from "@/src/components/systemUI/MergePDFClient";
 import { Metadata } from "next";
 
@@ -32,6 +33,28 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const faqs = [
+    {
+      question: "How to Merge PDF Files Online?",
+      answer:
+        "To get started you need to select the PDF files that you want to combine. You can do this. You can simply drag the PDF files into the box. Next you should rearrange the order of the PDF files by dragging them into the order that you like. Now all you have to do is click the button that says 'Merge PDF'. Then you can download the combined PDF files instantly.",
+    },
+    {
+      question: "Why use SwiftPDF to Combine PDFs?",
+      answer:
+        "SwiftPDF makes combining PDFs easy. You can merge files quickly without downloading any software. Your files are kept safe and deleted automatically when done so you do not have to worry about your privacy. SwiftPDF is a tool that is easy to use. It helps students, professionals and regular people combine PDFs. It is designed to make merging PDFs fast, secure and hassle-free, for everyone.",
+    },
+    {
+      question: "Is SwiftPDF really free with no sign-up or login required?",
+      answer:
+        "While most websites charge for merging PDFs we do not! We think everyone should have access, to PDF tools. Our free PDF merging service is easy to use. There are no fees or subscription requirements. You do not need to create an account. Just upload your files merge them and download your PDF. It is that simple and fast taking seconds.",
+    },
+    {
+      question: "Is SwiftPDF completely free to use without sign-up or login?",
+      answer:
+        "Most websites will charge you to merge your PDF files. We do not do that. We think that everyone should be able to use our PDF tools without any problems. Our PDF merging service is free and easy to use. There are no costs or things you need to pay for. You do not have to sign up or pay a fee every month. All you have to do is upload your PDF files merge the PDF files and then download the PDF file that has all the files combined. You can do all of this in a few seconds.",
+    },
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="bg-white py-16 px-4 border-b border-gray-200">
@@ -41,53 +64,19 @@ export default function Page() {
             Combine Documents for Free
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            The simplest way to **combine multiple PDF documents** into a
-            single, organized file. Keep your formatting intact and your data
-            secure with our browser-based merging tool.
+            To put all your **PDF documents** together in one file you can use a
+            tool that makes it easy for you. This way you can keep your files
+            looking the same. Your information is safe when you use the tool, on
+            the internet to **combine PDF documents**.{" "}
           </p>
         </div>
       </section>
 
-      <section className="py-12" aria-label="PDF Merging Tool">
+      <section className="py-4" aria-label="PDF Merging Tool">
         <MergePDFClient />
       </section>
 
-      <article className="pb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">
-          How to Merge PDF Files Online
-        </h2>
-        <ol className="list-decimal pl-5 space-y-2">
-          <li>
-            Select the PDF files you want to combine or you can drag them into the box.
-          </li>
-          <li>
-            Rearrange the file order by dragging them into your preferred
-            sequence.
-          </li>
-          <li>Click 'Merge PDF' and download your combined file instantly.</li>
-        </ol>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          Why use SwiftPDF to Combine PDFs?
-        </h2>
-        <h3 className="text-xl font-semibold mt-6">How your files are 100% Secure Processing</h3>
-        <p>
-          We value your privacy. Your files are encrypted via SSL and SwiftPDF
-          are never stored on our servers longer than 60 minutes and we don't
-          store any of your data in our database and we don't ask for any personal information. All files are automatically deleted after processing, ensuring your documents remain confidential and secure.
-        </p>
-        <h3 className="text-xl font-semibold mt-6">
-          The perfect free tool—no sign-up or login required.
-        </h3>
-        <p className="text-sm text-slate-500 leading-relaxed">
-          While most websites charge for their PDF merging services, we don't!
-          We believe in providing powerful PDF tools to everyone without
-          barriers. Our free merging service is designed to be accessible and
-          easy to use, with no hidden fees, subscription requirements, or
-          account creation needed. Just upload your files, merge them, and
-          download your combined PDF in seconds.
-        </p>
-      </article>
+      <FaqSection faqs={faqs} />
 
       <script
         type="application/ld+json"

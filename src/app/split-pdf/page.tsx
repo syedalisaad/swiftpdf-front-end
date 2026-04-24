@@ -1,4 +1,5 @@
 // app/split-pdf/page.tsx (Server Component)
+import FaqSection from "@/src/components/systemUI/FaqSection";
 import SplitPDFClient from "@/src/components/systemUI/SplitPDFClient";
 import { Metadata } from "next";
 
@@ -27,6 +28,28 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+   const faqs = [
+  {
+    question: "How to Split PDF Files in Seconds?",
+    answer:
+      "You can split PDF files really fast, with SwiftPDF. Here is how you do it: Upload your PDF file. Choose what you want to do: Extract all pages this will split your PDF into pages. Select a page range you need to enter the page numbers you want. Click the submit button and wait for a seconds When it is done: If you chose to extract all pages you will get a ZIP file and this file will have each page as a separate PDF file. If you chose a page range you will get a PDF file and this new PDF file will have only the pages you selected. Now you can download your PDF file with SwiftPDF."
+  },
+  {
+    question: "Is it safe to split my PDF files here?",
+    answer:
+      "Yes. SwiftPDF keeps your information private. We use processing with our FastAPI backend. Your documents get processed away. They are not stored forever in a database or on our computers. All temporary files get deleted after processing. We do not need your details. No sign-ups or subscriptions are required. Our tools are free and safe to use. Alternatively a human-like version could be: I can confirm that. SwiftPDF really prioritizes your privacy. They use processing through their FastAPI backend. Your documents are processed in time. They are never stored permanently on their database or servers. To make sure everything stays confidential all temporary files get automatically purged after processing. They do not require any information, from you. No sign-ups or subscriptions are needed. Their tools are completely free and secure for you to use."
+  },
+  {
+    question: "hy should I use SwiftPDF to split my documents?",
+    answer:
+      "SwiftPDF is different from platforms. They limit the number of files you can work with. They make you create an account.. Swiftpdf does not do that. You can use SwiftPDF without any problems. We let you split files fast. There are no limits on how files you can split each day. You do not have to sign up for anything. Our website is simple and easy to use. This means you get your results quickly. We do not use scripts that slow down our website. We do not have annoying pop-ups either. SwiftPDF is great for managing documents. It is free. It is very good. So it is perfect for students and freelancers and businesses. SwiftPDF is the choice, for all these people because it is free and easy to use."
+  },
+  {
+    question: "Will my files be stored after splitting?",
+    answer:
+      "No your files are not stored after we split them. We process all the documents you upload in a secure way and only keep them for a little while. Then we delete them from our servers away. This way your privacy and the security of your data are completely safe."
+  }
+];
   return (
     <div className="min-h-screen">
       <header className="mb-10 text-center">
@@ -36,79 +59,15 @@ export default function Page() {
           for Free
         </h1>
         <p className="text-lg text-gray-600">
-          SwiftPDF provides a professional-grade PDF splitter that works
-          entirely in your browser. No software installation or account
-          required.
+          SwiftPDF has a good tool that helps you split PDF files right in your browser. You do not need to install any software or make an account to use SwiftPDF.
         </p>
       </header>
       <section aria-label="Split PDF Tool">
         <SplitPDFClient />
       </section>
+      <FaqSection faqs={faqs} />
 
-      {/* 2. SEO Content Section - CRITICAL for "Low Value Content" fix */}
-      <article className="max-w-4xl mx-auto px-6 py-16 prose prose-slate">
-        <header className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">
-            How to Split PDF Files in Seconds
-          </h2>
-          <p className="text-lg text-gray-600">
-            SwiftPDF provides a professional-grade PDF splitter that works
-            entirely in your browser. No software installation or account
-            required.
-          </p>
-        </header>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-red-600">
-              Extract Specific Ranges
-            </h3>
-            <h4 className="text-gray-700">
-              Need only pages 5 to 10? Our <strong>PDF Range Extractor</strong>{" "}
-              allows you to input custom page numbers and generate a new
-              document containing only the information you need.
-            </h4>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-red-600">Bulk Split PDF</h3>
-            <h4 className="text-gray-700">
-              Turn a 100-page document into 100 individual files with one click.
-              Our <strong>Separate PDF</strong>
-              mode is optimized for high-speed processing without losing
-              quality.
-            </h4>
-          </div>
-        </div>
-
-        <div className="mt-12 bg-gray-50 p-8 rounded-3xl border border-gray-100">
-          <h3 className="text-xl font-bold mb-4">
-            Is it safe to split my PDF files here?
-          </h3>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Yes. SwiftPDF prioritizes your privacy by using secure processing
-            through our FastAPI backend. Your documents are processed in
-            real-time and are never stored permanently in a database or on our
-            servers. To ensure total confidentiality, all temporary files are
-            automatically purged immediately after processing. We don't require
-            any personal information, sign-ups, or subscriptions—our tools are
-            completely free and secure to use.
-          </p>
-          <h3 className="text-xl font-bold mb-4">
-            Why should I use SwiftPDF to split my documents?
-          </h3>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Unlike many other platforms that limit the number of files you can
-            process or force you to create an account, SwiftPDF offers a truly
-            "no-strings-attached" experience. We provide high-speed splitting
-            with no daily limits and no mandatory sign-ups. Our platform is
-            built on a lightweight architecture, meaning you get your results in
-            seconds without the clutter of heavy tracking scripts or intrusive
-            pop-ups. We offer professional-grade document management for free,
-            making it the ideal choice for students, freelancers, and businesses
-            alike.
-          </p>
-        </div>
-      </article>
+     
 
       <script
         type="application/ld+json"
