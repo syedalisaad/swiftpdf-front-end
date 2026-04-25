@@ -1,3 +1,4 @@
+import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFToPPTClient from "@/src/components/systemUI/PDFToPPTClient";
 import { Metadata } from "next";
 
@@ -19,6 +20,85 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const pdfToPptFaqs = [
+  {
+    question: "How can I convert a PDF to PowerPoint online?",
+    answer:
+      `You can upload your PDF file. Then click to convert it. After that you can download your PowerPoint file. It will only take a few seconds. The whole thing is really easy to do. You do not have to install anything on your computer to make it work. You can just upload your PDF file click convert and then download your PowerPoint file.`
+  },
+  {
+    question: "Can I convert PDF to editable PowerPoint slides?",
+    answer:
+      `SwiftPDF is really helpful because it can change your PDF into PowerPoint slides that you can edit completely. This means you can change the text, the pictures and the way everything is laid out in your PowerPoint slides using SwiftPDF.`
+  },
+  {
+    question: "Will the original layout be preserved during conversion?",
+    answer:
+      `SwiftPDF really does a job of keeping the slide structure, formatting and alignment very similar to the original SwiftPDF document. This means that when you use SwiftPDF it will look a lot, like the SwiftPDF.`
+  },
+  {
+    question: "Are text and fonts preserved in the converted PPT?",
+    answer:
+      `The text is taken out. Changed into things that can be edited. The fonts are kept the same. Swapped with other fonts that look pretty much the same if that is necessary. This way the text still looks good. The fonts are similar, to the original ones.`
+  },
+  {
+    question: "What happens to images and graphics in the PDF?",
+    answer:
+      "The images are really clear. They look great in the slides. All the icons and other visual elements are also kept in quality. These images and icons are placed in the spots within the slides. The images, icons and visual elements are all easy to see. They are exactly where they should be, in the slides."
+  },
+  {
+    question: "Can I convert scanned PDFs to PowerPoint?",
+    answer:
+      `Yes. SwiftPDF has a feature that lets you extract text from scanned PDFs using something called OCR technology. This means you can take a scanned PDF and turn it into PowerPoint slides using SwiftPDF. SwiftPDF makes this process pretty easy. You can use SwiftPDF to extract text, from scanned PDFs and then convert that text into PowerPoint slides that you can edit.`
+  },
+  {
+    question: "Is PDF to PPT conversion secure?",
+    answer:
+      `So your files are encrypted when they are being transferred. This means your Google Drive files or your Dropbox files are encrypted.. Then after we are done processing your files they are automatically deleted. This is how we make sure that your Google Drive files and your Dropbox files and all of your data remains private. We do this to protect your files. Your files are important, to you. We want to make sure that your files are safe.`
+  },
+  {
+    question: "Do I need to install any software?",
+    answer:
+      `SwiftPDF works online. This means you can convert your files in your browser. You do not have to download anything to use SwiftPDF. You can just go to the website. Start converting your files with SwiftPDF.`
+  },
+  {
+    question: "How long does the conversion take?",
+    answer:
+      `Most files are changed into a format within a few seconds. This is because the time it takes to do this depends on how big the file's how complicated it is. Most files are converted quickly usually within seconds.`
+  },
+  {
+    question: "Can I convert large PDF files to PowerPoint?",
+    answer:
+      `Yes. SwiftPDF works with files.. It takes more time if the file is huge.`
+  },
+  {
+    question: "Are my files stored after conversion?",
+    answer:
+      `No. Files are processed for a time. They are deleted right after conversion.`
+  },
+
+  // 🔥 EXTRA HIGH-INTENT FAQs
+  {
+    question: "Will each PDF page become a separate slide?",
+    answer:
+      "Yes. Each page of your PDF is converted into an individual PowerPoint slide for easy editing and presentation."
+  },
+  {
+    question: "Is the converted PowerPoint file editable?",
+    answer:
+      `Yes. You can fully edit the text, images and layouts, in the PowerPoint file you get.`
+  },
+  {
+    question: "Does SwiftPDF support both PPT and PPTX formats?",
+    answer:
+      `The file we get is usually, in PPTX format. This format works with the presentation software we use today. The PPTX format is what we normally get when we convert a file.`
+  },
+  {
+    question: "Is this PDF to PowerPoint converter free?",
+    answer:
+      `SwiftPDF is really useful because it lets you convert PDF to PPT for free. The best part is that you do not have to sign up or log in to use SwiftPDF. You can just use SwiftPDF to convert your PDF to PPT away. SwiftPDF makes it very easy to convert PDF to PPT.`
+  }
+];
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 1. SEO Header Section - Focus on Editability */}
@@ -28,9 +108,7 @@ export default function Page() {
             Professional <span className="text-red-600">PDF to PowerPoint</span> Converter
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Stop starting from scratch. Turn your static PDF files into 
-            <strong> fully editable PowerPoint (.pptx)</strong> presentations 
-            while keeping your images, text, and layouts perfectly aligned.
+            Do not start from the beginning every time. You can change your PDF files into PowerPoint presentations that you can edit. This way your images, text and layouts will look the same. You will get editable PowerPoint files with a.pptx extension. This means you can edit your PowerPoint presentations easily.
           </p>
         </div>
       </section>
@@ -39,46 +117,8 @@ export default function Page() {
       <section  aria-label="PDF to PowerPoint Conversion Workspace">
         <PDFToPPTClient />
       </section>
+      <FaqSection faqs={pdfToPptFaqs} />
 
-      {/* 3. Educational Content (Fixes "Low Value Content" & Adds Keywords) */}
-      <article className="max-w-5xl mx-auto px-6 py-20 border-t border-gray-200 mt-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose SwiftPDF for Presentations?</h2>
-            <p className="text-gray-700 mb-4">
-              Converting a PDF to a slide deck requires more than just extraction. Our 
-              <strong> PDF to PPTX</strong> engine analyzes the document structure to 
-              create logical slide transitions and maintain vector graphics quality.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-sm text-gray-600">
-                <span className="bg-red-100 text-red-600 p-1 rounded-full font-bold">✓</span>
-                <strong>Editable Text:</strong> No more flat images; edit your text directly in PPT.
-              </li>
-              <li className="flex items-center gap-3 text-sm text-gray-600">
-                <span className="bg-red-100 text-red-600 p-1 rounded-full font-bold">✓</span>
-                <strong>Image Preservation:</strong> Photos are extracted at their original resolution.
-              </li>
-              <li className="flex items-center gap-3 text-sm text-gray-600">
-                <span className="bg-red-100 text-red-600 p-1 rounded-full font-bold">✓</span>
-                <strong>Format Security:</strong> Safe, cloud-encrypted processing for your business decks.
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-            <h3 className="text-xl font-bold mb-4">Zero-Installation Workflow</h3>
-            <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              SwiftPDF works entirely in your browser. Whether you are using a 
-              Windows PC, a Mac, or even your mobile device, you can generate 
-              presentation-ready slides without downloading bulky software.
-            </p>
-            <p className="text-xs text-gray-400 italic mt-6 border-t pt-4">
-              * Privacy Note: All uploaded files are automatically deleted within 60 minutes.
-            </p>
-          </div>
-        </div>
-      </article>
 
       {/* 4. Structured Data (JSON-LD) */}
       <script
