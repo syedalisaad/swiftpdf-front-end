@@ -1,3 +1,4 @@
+import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFToWordClient from "@/src/components/systemUI/PDFToWordClient";
 import { Metadata } from "next";
 
@@ -28,6 +29,75 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const pdfToWordFaqs = [
+  {
+    question: "Why is SwiftPDF the most reliable PDF to Word converter?",
+    answer:
+      "SwiftPDF is made to change PDF files into Word files accurately. It keeps the layout and structure of the file the same. SwiftPDF also keeps the formatting the same. This means that headers and footers and margins stay the same. So you get a document that you can edit easily. SwiftPDF does a job of making sure the PDF, to Word conversion is perfect."
+  },
+  {
+    question: "Does SwiftPDF preserve the original layout of PDFs?",
+    answer:
+      "SwiftPDF is really good at keeping things looking the same. It uses methods to make sure the original layout stays the same. This includes things like columns and headers and footers and the space, around the edges of the page. SwiftPDF does all this when it is converting files."
+  },
+  {
+    question: "Is my data safe when using SwiftPDF?",
+    answer:
+      "Yes. All of your file processing is done with a strong protection. This protection is called 256-bit SSL encryption. So your files are handled in a secure way.. After we are done converting your files they are automatically deleted from our servers. This happens within a time."
+  },
+  {
+    question: "What is PDF to DOCX conversion used for?",
+    answer:
+      "Converting a PDF to a DOCX file is really helpful because it lets you edit the content of the PDF in Microsoft Word or Office 365. This way you can make changes to the PDF. It will still look the same with all the formatting and tables and structure of the PDF staying intact. You can edit the PDF content, in Microsoft Word or Office 365."
+  },
+  {
+    question: "Will tables and data remain editable after conversion?",
+    answer:
+      "SwiftPDF is really useful because it keeps tables in a format that you can edit. This means you can easily change things in reports, data sheets and other structured content. You can modify the tables in SwiftPDF without any hassle, which's great for things like financial reports and data sheets. SwiftPDF makes it easy to work with tables, in these kinds of documents."
+  },
+  {
+    question: "Are images preserved during PDF to Word conversion?",
+    answer:
+      "Yes. All images stay in quality. They remain in their positions, in the Word document."
+  },
+  {
+    question: "How long are my files stored on SwiftPDF servers?",
+    answer:
+      "Files arThe information is temporarily. Then it is automatically removed within 60 minutes. This is done to make sure that the information of the user is private and secure. The system does this to protect the user data. The data of the user is removed after 60 minutes to ensure privacy and security of the user information."
+  },
+
+   {
+    question: "Can I convert scanned PDFs to Word?",
+    answer:
+      "Yes. SwiftPDF can extract text from scanned PDFs. It uses OCR to do this. The result is Word files. SwiftPDF supports conversion, like this."
+  },
+  {
+    question: "Is there a file size limit for PDF to Word conversion?",
+    answer:
+      "SwiftPDF works with big files.. How fast it works can be different. It depends on how large the file's how complicated it is."
+  },
+  {
+    question: "Do I need to install any software?",
+    answer:
+      "SwiftPDF works completely on the internet in your web browser. You do not need to download anything or install it on your computer. SwiftPDF is really easy to use because of this."
+  },
+  {
+    question: "Does SwiftPDF support mobile devices?",
+    answer:
+      "Yes. You can use SwiftPDF on your phone on a tablet and on a desktop computer, without any problems. SwiftPDF works fine on devices. It also works fine on tablets and desktop devices."
+  },
+  {
+    question: "Will formatting be exactly the same after conversion?",
+    answer:
+      "Most of the time the answer is yes. When we are talking about layouts SwiftPDF may need some small adjustments but it is designed to keep things as accurate, as possible with SwiftPDF."
+  },
+  {
+    question: "Is SwiftPDF free to use?",
+    answer:
+      "Yes. SwiftPDF is free to use. You do not need to sign up or pay a subscription fee."
+  }
+  
+];
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 1. SEO Header Section - Focus on Accuracy & Ease */}
@@ -38,9 +108,7 @@ export default function Page() {
             Online
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Turn your static PDF documents into **fully editable Microsoft Word
-            (.docx)** files. Our engine reconstructs your document layout,
-            preserving fonts, tables, and images with pinpoint precision.
+            You can change your PDF documents into Microsoft Word files that you can edit. Our system rebuilds your document layout keeping the fonts, tables and images exactly as they are. This way you get editable Microsoft Word files.
           </p>
         </div>
       </section>
@@ -49,61 +117,7 @@ export default function Page() {
       <section className="py-12" aria-label="PDF to Word Conversion Tool">
         <PDFToWordClient />
       </section>
-
-      {/* 3. Deep-Value Content (Combatting "Low Value Content" Flags) */}
-      <article className="max-w-5xl mx-auto px-6 py-20 border-t border-gray-200 mt-10">
-        {/* NEW H2: Establishing the main secondary topic */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-          The Most Reliable PDF to Word Converter Online
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Reconstruct Original Layouts
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Most converters ruin your columns and headers. **SwiftPDF** uses a
-              reconstruction algorithm to ensure your **headers, footers, and
-              margins** stay exactly where they belong.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-            {/* Changed to H3 so it matches the left side */}
-            <h3 className="text-xl font-bold mb-4">
-              Secure & Private PDF Processing
-            </h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              SwiftPDF uses **256-bit SSL encryption**. Processing occurs in a
-              secure environment, and files are **purged from our servers**
-              within 60 minutes.
-            </p>
-          </div>
-        </div>
-
-        {/* NEW SECTION: High-Traffic H3s */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <h3 className="font-bold text-red-600">PDF to DOCX</h3>
-            <p className="text-xs text-gray-500">
-              Perfect for Microsoft Word 2019, 2021, and Office 365.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-red-600">Preserve Tables</h3>
-            <p className="text-xs text-gray-500">
-              Data stays inside cells, making it easy to edit financial reports.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-red-600">Preserve Images</h3>
-            <p className="text-xs text-gray-500">
-              High-resolution images stay embedded at original quality.
-            </p>
-          </div>
-        </div>
-      </article>
+      <FaqSection faqs={pdfToWordFaqs} />
 
       {/* 4. Multi-Schema Data (JSON-LD) */}
       <script
