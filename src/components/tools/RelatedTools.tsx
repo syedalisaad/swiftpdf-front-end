@@ -17,10 +17,10 @@ export default function RelatedTools({ activeTool, hoverColor = "hover:text-red-
           <Link
             key={tool.name}
             href={tool.href}
-            className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:-translate-y-1"
+            className="group bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:-translate-y-1"
           >
-            <div className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center mb-6`}>
-              <tool.icon size={24} />
+            <div className={`w-30 h-20 ${tool.color} flex items-start justify-start md:items-center `}>
+              <tool.icon size={50} />
             </div>
             <h3 className={`text-xl font-bold text-gray-800 mb-2 transition-colors ${hoverColor}`}>
               {tool.name}
