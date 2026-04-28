@@ -17,116 +17,25 @@ import {
 } from "lucide-react";
 
 export const PDF_TOOLS = [
-  {
-    id: "merge-pdf",
-    name: "Merge PDF",
-    desc: "Combine multiple PDFs into one",
-    icon: Merge,
-    href: "/merge-pdf",
-    color: "bg-red-50 text-red-600",
-  },
-  {
-    id: "split-pdf",
-    name: "Split PDF",
-    desc: "Extract pages from your PDF",
-    icon: Scissors,
-    href: "/split-pdf",
-    color: "bg-orange-50 text-orange-600",
-  },
-  {
-    id: "pdf-to-word",
-    name: "PDF to Word",
-    desc: "Convert PDF to editable Docx",
-    icon: FileText,
-    href: "/pdf-to-word",
-    color: "bg-blue-50 text-blue-500",
-  },
-  {
-    id: "word-to-pdf",
-    name: "Word to PDF",
-    desc: "Create PDF from Docx files",
-    icon: FileType,
-    href: "/word-to-pdf",
-    color: "bg-indigo-50 text-indigo-600",
-  },
-  {
-    id: "ppt-to-pdf",
-    name: "PPT to PDF",
-    desc: "PowerPoint to PDF slides",
-    icon: Presentation,
-    href: "/ppt-to-pdf",
-    color: "bg-amber-50 text-amber-600",
-  },
-  {
-    id: "pdf-to-ppt",
-    name: "PDF to PPT",
-    desc: "Convert PDF to PowerPoint slides",
-    icon: FileSliders,
-    href: "/pdf-to-ppt",
-    color: "bg-rose-50 text-rose-600",
-  },
-  {
-    id: "excel-to-pdf",
-    name: "Excel to PDF",
-    desc: "Turn spreadsheets into PDF",
-    icon: TableProperties,
-    href: "/excel-to-pdf",
-    color: "bg-green-50 text-green-600",
-  },
-  {
-    id: "pdf-to-excel",
-    name: "PDF to Excel",
-    desc: "Extract tables from PDF to Excel",
-    icon: FileSpreadsheet,
-    href: "/pdf-to-excel",
-    color: "bg-emerald-50 text-emerald-600",
-  },
-  {
-    id: "image-to-pdf",
-    name: "Image to PDF",
-    desc: "Convert Image to PDF",
-    icon: ImageIcon,
-    href: "/image-to-pdf",
-    color: "bg-purple-50 text-purple-600",
-  },
-  {
-    id: "pdf-to-image",
-    name: "PDF to Image",
-    desc: "Extract images from PDF",
-    icon: FileOutput,
-    href: "/pdf-to-image",
-    color: "bg-pink-50 text-pink-600",
-  },
-  {
-    id: "pdf-editor",
-    name: "Edit PDF",
-    desc: "Edit text, images, and pages in your PDF",
-    icon: FilePenLine,
-    href: "/edit-pdf",
-    color: "bg-red-50 text-red-700",
-  },
-  { 
-    id: 'pdf-to-speech',
-    name: 'AI PDF Reader', 
-    desc: 'Upload and listen to your PDF documents', 
-    icon: FileVolume, 
-    href: '/pdf-to-speech', 
-    color: 'bg-violet-50 text-violet-700' 
-  },
-  { 
-    id: 'text-to-speech',
-    name: 'AI Text Reader', 
-    desc: 'Paste text and listen with AI voice', 
-    icon: Mic2, 
-    href: '/text-to-speech', 
-    color: 'bg-purple-50 text-purple-600' 
-  },
-  {
-    id: "ats-checker",
-    name: "ATS Resume Checker",
-    desc: "Score your CV against job descriptions",
-    icon: ScanSearch,
-    href: "/ats-checker",
-    color: "bg-cyan-50 text-cyan-600",
-  },
+  // ORGANIZE
+  { id: "merge-pdf", name: "Merge PDF", category: "Organize", icon: Merge, href: "/merge-pdf", color: "text-red-600" },
+  { id: "split-pdf", name: "Split PDF", category: "Organize", icon: Scissors, href: "/split-pdf", color: "text-orange-600" },
+  { id: "pdf-editor", name: "Edit PDF", category: "Organize", icon: FilePenLine, href: "/edit-pdf", color: "text-red-700" },
+  
+  // CONVERT TO PDF
+  { id: "word-to-pdf", name: "Word to PDF", category: "Convert to PDF", icon: FileType, href: "/word-to-pdf", color: "text-indigo-600" },
+  { id: "ppt-to-pdf", name: "PPT to PDF", category: "Convert to PDF", icon: Presentation, href: "/ppt-to-pdf", color: "text-amber-600" },
+  { id: "excel-to-pdf", name: "Excel to PDF", category: "Convert to PDF", icon: TableProperties, href: "/excel-to-pdf", color: "text-green-600" },
+  { id: "image-to-pdf", name: "Image to PDF", category: "Convert to PDF", icon: ImageIcon, href: "/image-to-pdf", color: "text-purple-600" },
+
+  // CONVERT FROM PDF
+  { id: "pdf-to-word", name: "PDF to Word", category: "Convert from PDF", icon: FileText, href: "/pdf-to-word", color: "text-blue-500" },
+  { id: "pdf-to-ppt", name: "PDF to PPT", category: "Convert from PDF", icon: FileSliders, href: "/pdf-to-ppt", color: "text-rose-600" },
+  { id: "pdf-to-excel", name: "PDF to Excel", category: "Convert from PDF", icon: FileSpreadsheet, href: "/pdf-to-excel", color: "text-emerald-600" },
+  { id: "pdf-to-image", name: "PDF to Image", category: "Convert from PDF", icon: FileOutput, href: "/pdf-to-image", color: "text-pink-600" },
+
+  // AI & ADVANCED
+  { id: 'pdf-to-speech', name: 'AI PDF Reader', category: "AI Tools", icon: FileVolume, href: '/pdf-to-speech', color: 'text-violet-700' },
+  { id: 'text-to-speech', name: 'AI Text Reader', category: "AI Tools", icon: Mic2, href: '/text-to-speech', color: 'text-purple-600' },
+  { id: "ats-checker", name: "ATS Checker", category: "AI Tools", icon: ScanSearch, href: "/ats-checker", color: "text-cyan-600" },
 ];
