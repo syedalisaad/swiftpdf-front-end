@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFToPPTClient from "@/src/components/systemUI/PDFToPPTClient";
 import { Metadata } from "next";
@@ -120,23 +121,11 @@ export default function Page() {
       <FaqSection faqs={pdfToPptFaqs} />
 
 
-      {/* 4. Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to convert PDF to editable PowerPoint slides",
-            "description": "A 3-step guide to converting PDF documents into PPTX presentations.",
-            "step": [
-              { "@type": "HowToStep", "name": "Upload", "text": "Select and upload your PDF file to the SwiftPDF converter." },
-              { "@type": "HowToStep", "name": "Convert", "text": "Our AI analyzes the layout and creates matching PowerPoint slides." },
-              { "@type": "HowToStep", "name": "Download", "text": "Download your fully editable .pptx file instantly." }
-            ]
-          })
-        }}
-      />
+     <Schema
+  name="PDF to PowerPoint Converter - Convert PDF to PPTX Online" 
+  description="Convert your PDF documents back into editable PowerPoint presentations (PPT/PPTX) for free. SwiftPDF preserves your original slides, layouts, and text formatting perfectly." 
+  url="/pdf-to-ppt" 
+/>
     </div>
   );
 }
