@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import AIReader from "@/src/components/systemUI/AIReader";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Mic2, Zap, ShieldCheck, Headphones, Factory } from "lucide-react";
