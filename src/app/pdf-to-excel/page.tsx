@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import PDFToExcelClient from "@/src/components/systemUI/PDFToExcelClient";
 import { Metadata } from "next";
 
@@ -78,30 +79,11 @@ export default function Page() {
       </article>
 
       {/* 4. Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "SwiftPDF PDF to Excel Converter",
-            "operatingSystem": "All",
-            "applicationCategory": "BusinessApplication",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "featureList": [
-              "AI Table Recognition",
-              "XLSX and CSV Export",
-              "Multi-sheet support",
-              "No registration required"
-            ],
-            "description": "Convert PDF documents to editable Excel spreadsheets accurately using AI-powered table extraction."
-          })
-        }}
-      />
+      <Schema
+  name="PDF to Excel Converter - AI Table Extraction Online" 
+  description="Convert PDF documents to editable Excel spreadsheets accurately. SwiftPDF uses AI-powered table recognition to export PDFs to XLSX and CSV while preserving data structure." 
+  url="/pdf-to-excel" 
+/>
     </div>
   );
 }

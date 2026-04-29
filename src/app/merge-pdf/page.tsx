@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import MergePDFClient from "@/src/components/systemUI/MergePDFClient";
 import { Metadata } from "next";
@@ -78,25 +79,11 @@ export default function Page() {
 
       <FaqSection faqs={faqs} />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "SwiftPDF Merger",
-            operatingSystem: "All",
-            applicationCategory: "MultimediaApplication",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-            description:
-              "Combine multiple PDF files into one for free. Maintain original quality and layout without installing software.",
-          }),
-        }}
-      />
+     <Schema
+  name="Merge PDF Online - Combine Multiple PDF Files" 
+  description="Merge and combine multiple PDF documents into one for free. SwiftPDF maintains your original quality and layout without watermarks or software installation." 
+  url="/merge-pdf" 
+/>
     </div>
   );
 }

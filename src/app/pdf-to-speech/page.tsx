@@ -1,3 +1,4 @@
+import Schema from '@/src/components/Schema';
 import AIReader from '@/src/components/systemUI/AIReader';
 import FaqSection from '@/src/components/systemUI/FaqSection';
 import { FileVolume, ShieldCheck, Zap, Globe } from 'lucide-react';
@@ -172,6 +173,11 @@ Just use a web browser to convert speech to PDF.`
 
        
       </div>
+      <Schema
+  name="PDF to Speech - Listen to Your PDF Documents Online" 
+  description="Convert PDF text into clear, natural-sounding audio for free. Listen to your documents on the go with SwiftPDF's high-quality AI voice reader." 
+  url="/pdf-to-speech" 
+/>
     </div>
   );
 }

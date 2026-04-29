@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFToWordClient from "@/src/components/systemUI/PDFToWordClient";
 import { Metadata } from "next";
@@ -120,50 +121,11 @@ export default function Page() {
       <FaqSection faqs={pdfToWordFaqs} />
 
       {/* 4. Multi-Schema Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "SwiftPDF PDF to Word Converter",
-              operatingSystem: "All",
-              applicationCategory: "BusinessApplication",
-              url: "https://swiftpdf.cloud/pdf-to-word",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "HowTo",
-              name: "How to convert PDF to Word editable format",
-              description:
-                "A simple 3-step guide to turning PDFs into DOCX files.",
-              step: [
-                {
-                  "@type": "HowToStep",
-                  name: "Upload",
-                  text: "Upload your PDF file to the SwiftPDF converter.",
-                },
-                {
-                  "@type": "HowToStep",
-                  name: "Convert",
-                  text: "Click 'Convert to Word' to begin the reconstruction process.",
-                },
-                {
-                  "@type": "HowToStep",
-                  name: "Download",
-                  text: "Download your high-quality .docx file instantly.",
-                },
-              ],
-            },
-          ]),
-        }}
-      />
+      <Schema
+  name="PDF to Word Converter - Convert to Editable DOCX Online" 
+  description="Convert your PDF documents back into editable Microsoft Word (DOCX) files for free. SwiftPDF ensures high-quality conversion, preserving all text, fonts, and layouts." 
+  url="/pdf-to-word" 
+/>
     </div>
   );
 }

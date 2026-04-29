@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import ATSChecker from "@/src/components/systemUI/ATSChecker";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Metadata } from "next";
@@ -176,26 +177,11 @@ This makes my resume more relevant, to the job.`,
         <FaqSection faqs={atsCheckerFaqs} />
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "SwiftPDF ATS Resume Checker",
-            url: "https://swiftpdf.cloud/ats-checker",
-            applicationCategory: "BusinessApplication",
-            browserRequirements: "Requires JavaScript",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-            description:
-              "Analyze your resume against job descriptions to get an ATS compatibility score and keyword suggestions.",
-          }),
-        }}
-      />
+     <Schema 
+  name="AI ATS Resume Checker - Get Your ATS Score for Free" 
+  description="Scan your resume against AI-powered Applicant Tracking Systems. Get a professional ATS score and tips to optimize your CV for job applications instantly." 
+  url="/ats-checker" 
+/>
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import ImageToPDFClient from "@/src/components/systemUI/ImageToPDFClient";
 import { Metadata } from "next";
@@ -125,22 +126,11 @@ You can convert images to PDF, in your browser.`
 
 
       {/* 4. Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to convert images to PDF for free",
-            "description": "Step-by-step guide to merging JPG and PNG images into a single PDF file.",
-            "step": [
-              { "@type": "HowToStep", "text": "Select or drag your images into the SwiftPDF uploader." },
-              { "@type": "HowToStep", "text": "Reorder your images to change the page sequence." },
-              { "@type": "HowToStep", "text": "Click 'Convert to PDF' and download your document." }
-            ]
-          })
-        }}
-      />
+     <Schema 
+  name="Image to PDF Converter - Convert JPG, PNG & WebP Online" 
+  description="Convert multiple images into a single high-quality PDF. SwiftPDF supports JPG, PNG, BMP, and WebP with easy page reordering and fast, secure processing." 
+  url="/image-to-pdf" 
+/>
     </main>
   );
 }

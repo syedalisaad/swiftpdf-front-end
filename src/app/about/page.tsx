@@ -139,6 +139,28 @@ SwiftPDF is a tool to use when you need to work with PDFs because SwiftPDF makes
           </p>
         </div>
       </div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwiftPDF",
+      "url": "https://swiftpdf.cloud",
+      "logo": "https://swiftpdf.cloud/logo.png", // Replace with your actual logo URL
+      "description": "SwiftPDF is a leading provider of free, secure, and web-based PDF management tools, helping users worldwide merge, split, and convert documents instantly.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressCountry": "PK"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/swift-pdf-cloud"
+        // Add other social links here
+      ]
+    }),
+  }}
+/>
     </div>
   );
 }

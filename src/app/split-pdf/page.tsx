@@ -1,4 +1,5 @@
 // app/split-pdf/page.tsx (Server Component)
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import SplitPDFClient from "@/src/components/systemUI/SplitPDFClient";
 import { Metadata } from "next";
@@ -59,7 +60,9 @@ export default function Page() {
           for Free
         </h1>
         <p className="text-lg text-gray-600">
-          SwiftPDF has a good tool that helps you split PDF files right in your browser. You do not need to install any software or make an account to use SwiftPDF.
+          SwiftPDF has a good tool that helps you split PDF files right in your
+          browser. You do not need to install any software or make an account to
+          use SwiftPDF.
         </p>
       </header>
       <section aria-label="Split PDF Tool">
@@ -67,36 +70,10 @@ export default function Page() {
       </section>
       <FaqSection faqs={faqs} />
 
-     
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: "How to split a PDF online",
-            description:
-              "Learn how to use SwiftPDF to extract pages from any PDF document for free.",
-            step: [
-              {
-                "@type": "HowToStep",
-                name: "Upload",
-                text: "Upload your PDF document to the SwiftPDF interface.",
-              },
-              {
-                "@type": "HowToStep",
-                name: "Configure",
-                text: "Choose between extracting a range of pages or splitting every page into separate files.",
-              },
-              {
-                "@type": "HowToStep",
-                name: "Download",
-                text: "Click 'Split PDF' and download your processed documents instantly.",
-              },
-            ],
-          }),
-        }}
+      <Schema
+        name="Split PDF Online - Extract Pages from PDF"
+        description="Split PDF files into separate pages or extract a specific page range into a new PDF document for free."
+        url="/split-pdf"
       />
     </div>
   );

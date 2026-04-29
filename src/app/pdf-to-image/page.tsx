@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFToImageClient from "@/src/components/systemUI/PDFToImageClient";
 import { Metadata } from "next";
@@ -124,35 +125,11 @@ This makes downloading them quick and easy.`,
 
       <FaqSection faqs={pdfToImageFaqs} />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: "How to convert PDF pages to images",
-            description:
-              "Step-by-step guide to extracting high-quality images from PDF files.",
-            step: [
-              {
-                "@type": "HowToStep",
-                name: "Upload PDF",
-                text: "Select your PDF document in the SwiftPDF uploader.",
-              },
-              {
-                "@type": "HowToStep",
-                name: "Convert",
-                text: "Choose your preferred output format (JPG or PNG) and click 'Extract'.",
-              },
-              {
-                "@type": "HowToStep",
-                name: "Download",
-                text: "Download your images individually or as a complete ZIP archive.",
-              },
-            ],
-          }),
-        }}
-      />
+      <Schema
+  name="PDF to Image Converter - Extract PDF Pages to JPG/PNG" 
+  description="Convert your PDF pages into high-quality images (JPG, PNG) for free. Extract individual pages or entire documents as clear, professional image files instantly." 
+  url="/pdf-to-image" 
+/>
     </div>
   );
 }

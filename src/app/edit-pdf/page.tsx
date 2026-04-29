@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import PDFEditorClient from "@/src/components/systemUI/PDFEditorClient";
 import { Metadata } from "next";
@@ -136,21 +137,11 @@ Editing PDFs is simple, with a web browser.`,
       <FaqSection faqs={editPdfFaqs} />
 
       {/* 4. Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "SwiftPDF Editor",
-            operatingSystem: "All",
-            applicationCategory: "OfficeApplication",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            description:
-              "Edit, sign, and redact PDF documents online for free.",
-          }),
-        }}
-      />
+     <Schema
+  name="Free Online PDF Editor - Edit, Sign & Annotate PDFs" 
+  description="Edit your PDF files online for free. Add text, images, shapes, and signatures to your documents securely without downloading any software." 
+  url="/edit-pdf" 
+/>
     </>
   );
 }

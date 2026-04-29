@@ -118,26 +118,25 @@ export default function RootLayout({
 
           {children}
 
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "WebApplication",
-                name: "swiftpdf PDF",
-                description:
-                  "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
-                url: "https://swiftpdf.cloud",
-                applicationCategory: "BusinessApplication",
-                operatingSystem: "Web Browser",
-                offers: {
-                  "@type": "Offer",
-                  price: "0.00",
-                  priceCurrency: "USD",
-                },
-              }),
-            }}
-          />
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication", // Changed from WebApplication to SoftwareApplication for better SEO
+      "name": "SwiftPDF",
+      "description": "Fast, secure, and free online PDF tools including merging, splitting, and conversions.",
+      "url": "https://swiftpdf.cloud",
+      "applicationCategory": "UtilitiesApplication", // More accurate than BusinessApplication
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }),
+  }}
+/>
         </main>
         <Footer /> {/* Footer is now global */}
         <Toaster position="top-center" richColors />

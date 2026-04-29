@@ -1,3 +1,4 @@
+import Schema from "@/src/components/Schema";
 import ExcelToPDFClient from "@/src/components/systemUI/ExcelToPDFClient";
 import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Metadata } from "next";
@@ -149,26 +150,11 @@ File size and complexity are the factors here.`
       </section>
       <FaqSection faqs={excelToPdfFaqs} />
 
-      {/* 4. Structured Data (JSON-LD) for Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "SwiftPDF Excel to PDF Converter",
-            operatingSystem: "All",
-            applicationCategory: "BusinessApplication",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-            description:
-              "Free online tool to convert Excel spreadsheets (XLSX, XLS, CSV) to high-quality PDF files while keeping formatting intact.",
-          }),
-        }}
-      />
+   <Schema 
+  name="Excel to PDF Converter - Convert XLSX & XLS Online" 
+  description="Convert Excel spreadsheets (XLSX, XLS, and CSV) to high-quality PDF files for free. SwiftPDF preserves your tables, formulas, and formatting perfectly." 
+  url="/excel-to-pdf" 
+/>
     </div>
   );
 }

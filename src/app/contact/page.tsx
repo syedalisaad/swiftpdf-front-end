@@ -129,6 +129,34 @@ export default function ContactPage() {
       <div className="mt-10">
         <FaqSection faqs={contactFaqs} />
       </div>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact SwiftPDF Support",
+      "description": "Get in touch with the SwiftPDF team for technical support, bug reports, or feature suggestions.",
+      "url": "https://swiftpdf.cloud/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "SwiftPDF",
+        "url": "https://swiftpdf.cloud",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "support@swiftpdf.cloud",
+            "contactType": "customer support",
+            "url": "https://swiftpdf.cloud/contact"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/swift-pdf-cloud"
+        ]
+      }
+    }),
+  }}
+/>
     </div>
   );
 }

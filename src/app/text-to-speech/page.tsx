@@ -149,10 +149,11 @@ You do not need to sign up to use it.`
       </section>
 
       <FaqSection faqs={textToSpeechFaqs} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <Schema 
+  name="AI Text to Speech - Convert Text to Natural Voice Online" 
+  description="Turn any text into high-quality, natural-sounding audio for free. SwiftPDF's AI voice generator supports multiple languages and speeds, perfect for creating audiobooks or proofreading." 
+  url="/text-to-speech" 
+/>
     </div>
   );
 }
