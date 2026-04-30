@@ -4,7 +4,7 @@ import MergePDFClient from "@/src/components/systemUI/MergePDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Merge PDF Online - Free & Fast PDF Combiner | SwiftPDF",
+  title: "Merge PDF Online - Free PDF Combiner & Joiner | SwiftPD",
   description:
     "Easily combine two or more PDF files into a single document. Secure, fast, and maintains original formatting. No installation required.",
   keywords: [
@@ -65,10 +65,7 @@ export default function Page() {
             Combine Documents for Free
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            To put all your **PDF documents** together in one file you can use a
-            tool that makes it easy for you. This way you can keep your files
-            looking the same. Your information is safe when you use the tool, on
-            the internet to **combine PDF documents**.{" "}
+           Our **PDF joiner** is really fast and totally secure. When you need to put together reports or stick together scanned receipts or get your papers in order our **PDF joiner** does all the hard work, for you right in your browser. You will have a time using our **PDF joiner** because it is smooth and does not slow down you can use as many files as you want and it has the kind of encryption that big companies use.
           </p>
         </div>
       </section>
@@ -79,11 +76,11 @@ export default function Page() {
 
       <FaqSection faqs={faqs} />
 
-     <Schema
-  name="Merge PDF Online - Combine Multiple PDF Files" 
-  description="Merge and combine multiple PDF documents into one for free. SwiftPDF maintains your original quality and layout without watermarks or software installation." 
-  url="/merge-pdf" 
-/>
+      <Schema
+        name="Merge PDF Online - Combine Multiple PDF Files"
+        description="Merge and combine multiple PDF documents into one for free. SwiftPDF maintains your original quality and layout without watermarks or software installation."
+        url="/merge-pdf"
+      />
     </div>
   );
 }
