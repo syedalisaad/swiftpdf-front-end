@@ -209,7 +209,7 @@ export default function PDFToWordClient() {
         />
       </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

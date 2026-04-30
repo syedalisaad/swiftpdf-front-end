@@ -202,7 +202,7 @@ export default function SplitPDFClient() {
         />
       </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

@@ -195,7 +195,7 @@ transition-all duration-200 resize-none"
         <AdBanner dataAdSlot="YOUR_TOP_AD_SLOT_ID" dataAdFormat="horizontal" />
       </div>
       <RelatedTools />
-      <FeatureBenefits />
+      
       <div className="max-w-4xl mx-auto mt-20 space-y-10 text-gray-300">
         <section>
           <h2 className="text-2xl font-bold text-gray-600 mb-3">

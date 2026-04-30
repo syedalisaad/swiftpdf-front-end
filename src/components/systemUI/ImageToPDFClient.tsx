@@ -252,7 +252,7 @@ export default function ImageToPDFClient() {
         />
       </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

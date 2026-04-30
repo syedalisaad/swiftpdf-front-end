@@ -1,6 +1,19 @@
 // src/components/Schema.tsx
-export default function Schema({ name, description, url }: { name: string, description: string, url: string }) {
-  const jsonLd = {
+
+type RatingType = {
+  ratingValue: number;
+  ratingCount: number;
+};
+
+interface SchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  rating?: RatingType; // optional
+}
+
+export default function Schema({ name, description, url, rating }: SchemaProps) {
+  const jsonLd: any = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": name,
@@ -12,17 +25,20 @@ export default function Schema({ name, description, url }: { name: string, descr
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock" 
-    },
-    // FIX: This block removes the "aggregateRating or review" error
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "940",
-      "bestRating": "5",
-      "worstRating": "1"
+      "availability": "https://schema.org/InStock"
     }
   };
+
+  // ✅ Only add rating if real data exists
+  if (rating) {
+    jsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: rating.ratingValue,
+      ratingCount: rating.ratingCount,
+      bestRating: 5,
+      worstRating: 1
+    };
+  }
 
   return (
     <script

@@ -57,7 +57,7 @@ export default function Home() {
         </section>
 
         <section aria-label="Features and Benefits" className="mb-20">
-          <FeatureBenefits />
+          
         </section>
 
         <section className="bg-white rounded-[40px] p-10 border border-red-50/50 shadow-[0_20px_50px_rgba(220,38,38,0.03)] mb-16">

@@ -4,7 +4,7 @@ import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Mic2, Zap, ShieldCheck, Headphones, Factory } from "lucide-react";
 
 export const metadata = {
-  title: "Free AI Text Reader | Natural Sounding Text to Speech Online",
+  title: "Free AI Text Reader | Natural Text to Speech (Multi-Language)",
   description:
     "Convert text to speech instantly with our free AI Reader. High-quality neural voices, zero latency, and 100% private browser-based processing.",
   keywords: [
@@ -28,20 +28,7 @@ export const metadata = {
     ],
   },
 };
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "AI Text Reader",
-  operatingSystem: "Web",
-  applicationCategory: "MultimediaApplication",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  description:
-    "A high-quality, privacy-focused AI Text to Speech reader that runs entirely in the browser.",
-};
+
 
 
 export default function TextToSpeechPage() {

@@ -4,7 +4,7 @@ import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free ATS Resume Checker | Score & Optimize Your CV | SwiftPDF",
+  title: "Get Your Resume Score | Free ATS CV Checker | SwiftPDF",
   description:
     "Free AI Resume Scanner for an instant ATS score. Analyze your resume against job descriptions to find missing keywords and boost your hiring chances.",
   alternates: {
@@ -148,7 +148,7 @@ This makes my resume more relevant, to the job.`,
     },
   ];
   return (
-    <main className="min-h-screen bg-[#F9FAFB] py-16">
+    <div className="min-h-screen bg-[#F9FAFB] py-16">
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-12 text-center">
           <span className="px-4 py-1.5 bg-cyan-100 text-cyan-700 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">
@@ -174,14 +174,58 @@ This makes my resume more relevant, to the job.`,
         <section aria-label="Resume Scanner Tool">
           <ATSChecker />
         </section>
+
+        <section className="mb-20">
+          <h2 className="text-3xl font-black text-gray-900 mb-8 text-center">
+            How to <span className="text-red-600">Optimize Your CV</span> in 3
+            Steps
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center font-black text-xl mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-2">Upload Resume</h3>
+              <p className="text-gray-500 text-sm">
+                Please upload your resume to our scanner. You can upload it as a
+                PDF or a Word document. Our scanner is very safe. It will look
+                at your resume.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center font-black text-xl mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-2">Paste Job Desc</h3>
+              <p className="text-gray-500 text-sm">
+                Add job description to find missing keywords. This will help
+                identify skills. Job description is key, to finding candidate.
+                It highlights qualifications. We need to add job description.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center font-black text-xl mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-2">Get Your Score</h3>
+              <p className="text-gray-500 text-sm">
+                You will get a score that tells you how well things work
+                together and some tips to make them work better. You will find
+                out how compatible things are and what you can do to improve
+                them. Receive a compatibility score and optimization tips to
+                help you make things work perfectly.
+              </p>
+            </div>
+          </div>
+        </section>
         <FaqSection faqs={atsCheckerFaqs} />
       </div>
 
-     <Schema 
-  name="AI ATS Resume Checker - Get Your ATS Score for Free" 
-  description="Scan your resume against AI-powered Applicant Tracking Systems. Get a professional ATS score and tips to optimize your CV for job applications instantly." 
-  url="/ats-checker" 
-/>
-    </main>
+      <Schema
+        name="AI ATS Resume Checker - Get Your ATS Score for Free"
+        description="Scan your resume against AI-powered Applicant Tracking Systems. Get a professional ATS score and tips to optimize your CV for job applications instantly."
+        url="/ats-checker"
+      />
+    </div>
   );
 }

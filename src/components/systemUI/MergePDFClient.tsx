@@ -220,7 +220,7 @@ export default function MergePDFClient() {
       </div>
 
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

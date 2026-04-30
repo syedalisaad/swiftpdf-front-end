@@ -238,7 +238,7 @@ export default function PDFToPPTClient() {
         </div>
         {/* Footer Tools Grid */}
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

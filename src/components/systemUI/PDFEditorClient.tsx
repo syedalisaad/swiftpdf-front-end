@@ -611,7 +611,7 @@ export default function PDFEditorClient() {
         />
       </div>
       <RelatedTools />
-      <FeatureBenefits />
+      
     </div>
   );
 }

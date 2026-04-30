@@ -231,7 +231,7 @@ export default function PPTToPDFClient() {
         />
       </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

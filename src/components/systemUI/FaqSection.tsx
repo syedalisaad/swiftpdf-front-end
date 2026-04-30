@@ -17,9 +17,9 @@ export default function FaqSection({faqs}:props) {
             key={index}
             className="bg-white p-6 rounded-3xl border border-slate-100 hover:border-red-100 transition-colors"
           >
-            <h4 className="text-lg font-bold text-slate-800 mb-2">
+            <h3 className="text-lg font-bold text-slate-800 mb-2">
               {faq.question}
-            </h4>
+            </h3>
             <p className="text-lg text-slate-500 leading-relaxed">
               {faq.answer}
             </p>

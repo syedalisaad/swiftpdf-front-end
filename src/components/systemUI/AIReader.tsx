@@ -280,7 +280,7 @@ export default function AIReader({ mode }: AIReaderProps) {
           />
         </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );

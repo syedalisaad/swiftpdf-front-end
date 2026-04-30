@@ -226,7 +226,7 @@ export default function ExcelToPDFClient() {
         />
       </div>
         <RelatedTools />
-        <FeatureBenefits />
+        
       </div>
     </div>
   );
