@@ -5,7 +5,7 @@ import SplitPDFClient from "@/src/components/systemUI/SplitPDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Split PDF Online - Extract Pages & Separate PDF Free",
+  title: "Split PDF Online - Extract & Separate PDF Free | SwiftPDF",
   description:
     "Easily split PDF files into individual pages or extract specific ranges. SwiftPDF.cloud is a fast, secure, and free online PDF splitter.",
   keywords: [
@@ -67,6 +67,14 @@ export default function Page() {
       </header>
       <section aria-label="Split PDF Tool">
         <SplitPDFClient />
+      </section>
+      <section className="max-w-4xl mx-auto px-4 mb-16 text-center">
+        <h2 className="text-3xl font-bold text-[#002B49] mb-6">
+          Fast & Secure <span className="text-[var(--medium-blue)]">PDF Page Extractor</span>
+        </h2>
+        <p className="text-gray-600 text-lg leading-relaxed">
+         You need to separate one page or split a document into individual files our SwiftPDF tool does the hard work, for you in just a few seconds. Our SwiftPDF is powered by an strong FastAPI backend. This means SwiftPDF keeps your document looking great and your information private when you use SwiftPDF.
+        </p>
       </section>
       <FaqSection faqs={faqs} />
 
