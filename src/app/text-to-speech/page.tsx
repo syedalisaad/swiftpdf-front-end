@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Updated Title: Optimized for volume and clarity (60 characters)
-  title: "AI Text Reader | Free Text to Speech Online (TTS) | SwiftPDF",
+  title: "AI Text Reader | Free Text to Speech Online (TTS)",
   description:
     "Convert text to speech instantly with our free AI Reader. High-quality neural voices, zero latency, and 100% private browser-based processing.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/text-to-speech",
   },
   openGraph: {
-    title: "AI Text Reader | Natural AI Voices | SwiftPDF",
+    title: "AI Text Reader | Natural AI Voices",
     description: "Transform any text into natural-sounding speech instantly.",
     type: "website",
     url: "https://swiftpdf.cloud/text-to-speech",

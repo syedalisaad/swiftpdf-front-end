@@ -3,7 +3,7 @@ import { Linkedin, Mail, MessageSquare } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | SwiftPDF Support & Feedback",
+  title: "Contact Us Support & Feedback",
   description:
     "Have a question or a complaint? Reach out to the SwiftPDF team via LinkedIn or Email for fast support.",
 };

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/word-to-pdf",
   },
   openGraph: {
-    title: "Word to PDF Converter | SwiftPDF",
+    title: "Word to PDF Converter",
     description:
       "Fast and secure Word to PDF conversion online. Perfect layout preservation.",
     url: "https://swiftpdf.cloud/word-to-pdf",

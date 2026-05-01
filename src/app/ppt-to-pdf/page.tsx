@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/ppt-to-pdf",
   },
   openGraph: {
-    title: "PowerPoint to PDF Converter | SwiftPDF.cloud",
+    title: "PowerPoint to PDF Converter.cloud",
     description:
       "Lightning-fast PPT to PDF conversion. Professional quality, secure, and 100% free.",
     url: "https://swiftpdf.cloud/ppt-to-pdf",

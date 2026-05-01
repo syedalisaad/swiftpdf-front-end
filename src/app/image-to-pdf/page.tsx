@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Fixed H1/Title Length (58 characters)
-  title: "Fast Image to PDF Converter | SwiftPDF",
+  title: "Fast Image to PDF Converter",
   description:
     "Easily convert multiple images into a single PDF document. High-quality conversion for JPG, PNG, and WEBP with automatic page scaling.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/image-to-pdf",
   },
   openGraph: {
-    title: "Fast Image to PDF Converter | SwiftPDF",
+    title: "Fast Image to PDF Converter",
     description:
       "Turn your photos and images into professional PDFs in seconds. Secure and high quality.",
     url: "https://swiftpdf.cloud/image-to-pdf",

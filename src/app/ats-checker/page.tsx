@@ -4,7 +4,7 @@ import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get Your Resume Score | Free ATS CV Checker | SwiftPDF",
+  title: "Get Your Resume Score | Free ATS CV Checker",
   description:
     "Free AI Resume Scanner for an instant ATS score. Analyze your resume against job descriptions to find missing keywords and boost your hiring chances.",
   alternates: {

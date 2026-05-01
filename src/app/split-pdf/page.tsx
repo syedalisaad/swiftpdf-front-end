@@ -5,7 +5,7 @@ import SplitPDFClient from "@/src/components/systemUI/SplitPDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Split PDF Online - Extract & Separate PDF Free | SwiftPDF",
+  title: "Split PDF Online - Extract & Separate PDF Free",
   description:
     "Easily split PDF files into individual pages or extract specific ranges. SwiftPDF.cloud is a fast, secure, and free online PDF splitter.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/split-pdf",
   },
   openGraph: {
-    title: "Split PDF Online | SwiftPDF.cloud",
+    title: "Split PDF Online.cloud",
     description:
       "Extract pages from your PDF or save each page as a separate PDF instantly.",
     url: "https://swiftpdf.cloud/split-pdf",

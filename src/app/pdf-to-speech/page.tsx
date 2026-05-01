@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 // 1. SEO Metadata Configuration
 export const metadata: Metadata = {
-  title: "AI PDF Reader | Listen to PDF with Natural AI Voices | SwiftPDF",
+  title: "AI PDF Reader | Listen to PDF with Natural AI Voices",
   description:
     "Upload any PDF and listen to it with high-quality AI voices. Secure, fast, and supports English, Spanish, German, and Urdu. Perfect for multitasking.",
   keywords: [

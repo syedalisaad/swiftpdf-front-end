@@ -4,7 +4,7 @@ import PDFToImageClient from "@/src/components/systemUI/PDFToImageClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to JPG Converter | Convert PDF to Image Online | SwiftPDF",
+  title: "PDF to JPG Converter | Convert PDF to Image Online",
   description:
     "Convert your PDF pages into high-resolution images instantly. SwiftPDF extracts every page as a clear JPG or PNG while maintaining 300 DPI quality.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/pdf-to-image",
   },
   openGraph: {
-    title: "PDF to Image Converter | SwiftPDF.cloud",
+    title: "PDF to Image Converter.cloud",
     description:
       "Turn any PDF into a collection of high-quality images in seconds. No registration required.",
     url: "https://swiftpdf.cloud/pdf-to-image",

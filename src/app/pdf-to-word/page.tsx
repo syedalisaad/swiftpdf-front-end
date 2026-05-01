@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Updated Title: Lead with high-intent keywords and 60-character optimization
-  title: "Convert PDF to Word Online | Free & Editable DOCX | SwiftPDF",
+  title: "Convert PDF to Word Online | Free & Editable DOCX",
   description:
     "Easily convert your PDF files into editable Microsoft Word documents. SwiftPDF preserves your original fonts, images, and layout with high accuracy.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/pdf-to-word",
   },
   openGraph: {
-    title: "PDF to Word Converter | SwiftPDF.cloud",
+    title: "PDF to Word Converter.cloud",
     description:
       "Lightning-fast PDF to Word conversion. Safe, secure, and professional quality.",
     url: "https://swiftpdf.cloud/pdf-to-word",

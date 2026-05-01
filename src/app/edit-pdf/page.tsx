@@ -4,7 +4,7 @@ import PDFEditorClient from "@/src/components/systemUI/PDFEditorClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free PDF Editor Online - Edit, Sign & Fill PDFs | SwiftPDF",
+  title: "Free PDF Editor Online - Edit, Sign & Fill PDFs",
   description:
     "The easiest way to edit your PDF files online. Add text, erase content, and sign documents instantly with SwiftPDF. No installation required.",
   alternates: {

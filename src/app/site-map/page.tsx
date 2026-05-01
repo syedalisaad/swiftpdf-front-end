@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { PDF_TOOLS } from "@/src/config/tools";
 
 export const metadata: Metadata = {
-  title: "Sitemap - All PDF Tools | SwiftPDF",
+  title: "Sitemap - All PDF Tools",
   description: "A complete list of all free online PDF tools provided by SwiftPDF, including converters, mergers, and editors.",
 };
 

@@ -108,7 +108,7 @@ export default function TermsOfService() {
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Terms and Conditions | SwiftPDF",
+      "name": "Terms and Conditions",
       "description": "The official terms of service for SwiftPDF. Learn about your rights, our service usage policies, and our commitment to document security.",
       "url": "https://swiftpdf.cloud/terms",
       "mainEntity": {

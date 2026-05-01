@@ -4,7 +4,7 @@ import FaqSection from "@/src/components/systemUI/FaqSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Excel to PDF Converter | Convert XLSX to PDF Online | SwiftPDF",
+  title: "Excel to PDF Converter | Convert XLSX to PDF Online",
   description:
     "Easily convert XLSX, XLS, and CSV files to high-quality PDF documents. Maintain table formatting and data integrity with our free online tool.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://swiftpdf.cloud/excel-to-pdf",
   },
   openGraph: {
-    title: "Excel to PDF - Professional Converter | SwiftPDF",
+    title: "Excel to PDF - Professional Converter",
     description:
       "Keep your tables perfectly aligned. Convert spreadsheets to PDF instantly.",
     url: "https://swiftpdf.cloud/excel-to-pdf",

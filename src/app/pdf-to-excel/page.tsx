@@ -4,14 +4,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Optimized H1/Title (56 characters)
-title: "PDF to Excel Converter | Convert PDF to XLSX Online | SwiftPDF",
+title: "PDF to Excel Converter | Convert PDF to XLSX Online",
   description: "Extract tables from PDF to Excel spreadsheets (.xlsx) instantly. SwiftPDF uses AI to accurately map rows and columns for easy data analysis.",
   keywords: ["pdf to excel", "convert pdf to xlsx", "extract table from pdf", "pdf to spreadsheet", "free online pdf converter"],
   alternates: {
     canonical: "https://swiftpdf.cloud/pdf-to-excel",
   },
   openGraph: {
-    title: "PDF to Excel Converter | SwiftPDF.cloud",
+    title: "PDF to Excel Converter.cloud",
     description: "Turn unselectable PDF tables into fully editable Excel spreadsheets in seconds.",
     url: "https://swiftpdf.cloud/pdf-to-excel",
     type: "website",

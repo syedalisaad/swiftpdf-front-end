@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | SwiftPDF - Your Document Security Matters",
+  title: "Privacy Policy - Your Document Security Matters",
   description:
     "Learn how SwiftPDF handles your data, our commitment to document privacy, and our use of Google AdSense cookies.",
   alternates: {
@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Privacy Policy | SwiftPDF",
+            name: "Privacy Policy",
             description:
               "Learn how SwiftPDF protects your data. We offer secure, browser-based PDF processing where your files are automatically deleted after conversion.",
             url: "https://swiftpdf.cloud/privacy-policy",
