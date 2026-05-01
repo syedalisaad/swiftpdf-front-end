@@ -4,8 +4,8 @@ import WordToPDFClient from "@/src/components/systemUI/WordToPDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // Optimized Title (60 characters) - Hits all secondary keywords
-  title: "Convert Word to PDF Online - Free DOC & DOCX to PDF | SwiftPDF",
+  // Updated Title: Optimized for high-volume keywords (58 characters)
+  title: "Word to PDF Converter | Convert DOC & DOCX to PDF Online",
   description:
     "Convert DOC and DOCX to PDF instantly with SwiftPDF. We preserve your formatting, fonts, and layout for a professional, high-quality result.",
   keywords: [
@@ -99,34 +99,43 @@ export default function Page() {
         "When you use a PDF the layout always stays the same. This means it looks good on every device. So PDF is really good for sharing with people at work and, for printing things out. PDF is great because the layout is fixed, which is why people like to use it for sharing and printing.",
     },
   ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* 1. SEO Header Section - High Impact & Semantic */}
+      {/* 1. SEO Header Section */}
       <section className="bg-white py-16 px-4 border-b border-gray-100 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
             Professional <span className="text-red-600">Word to PDF</span>{" "}
             Converter
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform your **Microsoft Word** documents, like `.doc`..Docx`
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            Turn your **Microsoft Word** documents, like `.doc`..Docx`
             files, into professional and high-quality **PDF files**. SwiftPDF
             makes sure that your fonts, margins and complex layouts stay exactly
             as they were in your original **Microsoft Word** document.
           </p>
+             <h2 className="text-2xl font-bold text-gray-800">
+            Fast and Secure DOCX to PDF Conversion Online
+          </h2>
+          <p className="text-gray-500 mt-2">
+            The simplest way to create shareable, non-editable PDF files from Word.
+          </p>
         </div>
       </section>
 
-      {/* 2. The Interactive Tool */}
-      <section aria-label="Word to PDF Conversion Tool">
+      {/* 2. Interactive Tool */}
+      <section className="py-12" aria-label="Word to PDF Conversion Tool">
         <WordToPDFClient />
       </section>
 
+      {/* 3. Refined FAQ Section */}
       <FaqSection faqs={docxToPdfFaqs} />
 
+      {/* 4. Structured Data */}
       <Schema
-        name="Word to PDF Converter"
-        description="Convert DOCX to PDF online for free."
+        name="Word to PDF Converter - Convert DOCX to PDF Online"
+        description="Convert your Word documents (DOC and DOCX) to professional PDF files for free. SwiftPDF ensures high-quality conversion while preserving all layout and formatting."
         url="/word-to-pdf"
       />
     </div>

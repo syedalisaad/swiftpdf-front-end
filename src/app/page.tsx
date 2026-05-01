@@ -61,9 +61,9 @@ export default function Home() {
         </section>
 
         <section className="bg-white rounded-[40px] p-10 border border-red-50/50 shadow-[0_20px_50px_rgba(220,38,38,0.03)] mb-16">
-          <h3 className="text-xl font-black text-slate-900 mb-6">
+          <h2 className="text-xl font-black text-slate-900 mb-6">
             Why Choose swiftpdf for Your PDF Management?
-          </h3>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8 text-slate-600 text-lg leading-relaxed">
             <p>
               Doing business paperwork should not take a lot of time. If you

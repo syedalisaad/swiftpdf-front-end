@@ -4,7 +4,7 @@ import MergePDFClient from "@/src/components/systemUI/MergePDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Merge PDF Online - Free PDF Combiner & Joiner | SwiftPD",
+  title: "Merge PDF Online | Combine PDF Files for Free | SwiftPDF",
   description:
     "Easily combine two or more PDF files into a single document. Secure, fast, and maintains original formatting. No installation required.",
   keywords: [
@@ -65,7 +65,20 @@ export default function Page() {
             Combine Documents for Free
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-           Our **PDF joiner** is really fast and totally secure. When you need to put together reports or stick together scanned receipts or get your papers in order our **PDF joiner** does all the hard work, for you right in your browser. You will have a time using our **PDF joiner** because it is smooth and does not slow down you can use as many files as you want and it has the kind of encryption that big companies use.
+            Our **PDF joiner** is really fast and totally secure. When you need
+            to put together reports or stick together scanned receipts or get
+            your papers in order our **PDF joiner** does all the hard work, for
+            you right in your browser. You will have a time using our **PDF
+            joiner** because it is smooth and does not slow down you can use as
+            many files as you want and it has the kind of encryption that big
+            companies use.
+          </p>
+          <h2 className="text-2xl font-bold text-gray-800">
+            Organize Your Documents in Seconds
+          </h2>
+          <p className="text-gray-500 mt-2">
+            No file limits, no watermarks—just a clean, professional merge every
+            time.
           </p>
         </div>
       </section>

@@ -251,8 +251,8 @@ export default function PDFEditorClient() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-[#F9FAFB] py-12 px-4 font-sans">
-      <div className="mb-2 border-b border-gray-50 pb-4">
+    <div className="min-h-screen bg-[#F9FAFB] py-8 px-4 font-sans">
+      <div className="mb-1 border-b border-gray-50 pb-1">
         <AdBanner 
           dataAdSlot="YOUR_TOP_AD_SLOT_ID" 
           dataAdFormat="horizontal" 

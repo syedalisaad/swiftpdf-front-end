@@ -4,7 +4,7 @@ import PDFEditorClient from "@/src/components/systemUI/PDFEditorClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Online PDF Editor | Edit, Sign & Fill PDFs | SwiftPDF",
+  title: "Free PDF Editor Online - Edit, Sign & Fill PDFs | SwiftPDF",
   description:
     "The easiest way to edit your PDF files online. Add text, erase content, and sign documents instantly with SwiftPDF. No installation required.",
   alternates: {
@@ -96,8 +96,7 @@ SwiftPDF is easy to use.`,
     },
     {
       question: "Is this PDF editor free to use?",
-      answer:
-        `Yes. SwiftPDF does offer PDF editing. You do not need to sign up or log in to use it.`,
+      answer: `Yes. SwiftPDF does offer PDF editing. You do not need to sign up or log in to use it.`,
     },
     {
       question: "Can I rearrange or delete pages in a PDF?",
@@ -131,17 +130,21 @@ Editing PDFs is simple, with a web browser.`,
           Modify documents, add text annotations, erase sensitive content, and
           sign PDFs securely—all without leaving your browser.
         </p>
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          Powerful Editing Tools for Every Document
+        </h2>
       </section>
 
       <PDFEditorClient />
       <FaqSection faqs={editPdfFaqs} />
 
       {/* 4. Structured Data (JSON-LD) */}
-     <Schema
-  name="Free Online PDF Editor - Edit, Sign & Annotate PDFs" 
-  description="Edit your PDF files online for free. Add text, images, shapes, and signatures to your documents securely without downloading any software." 
-  url="/edit-pdf" 
-/>
+      <Schema
+        name="Free Online PDF Editor - Edit, Sign & Annotate PDFs"
+        description="Edit your PDF files online for free. Add text, images, shapes, and signatures to your documents securely without downloading any software."
+        url="/edit-pdf"
+      />
     </>
   );
 }

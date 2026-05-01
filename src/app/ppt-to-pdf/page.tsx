@@ -4,8 +4,8 @@ import PPTToPDFClient from "@/src/components/systemUI/PPTToPDFClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // Optimized H1/Title (58 characters)
-  title: "Convert PowerPoint to PDF Online — 100% Free & Secure",
+  // Updated Title: Lead with highest volume keyword (58 characters)
+  title: "PPT to PDF Converter | Convert PowerPoint to PDF Online",
   description:
     "Convert PPT and PPTX to PDF online for free. SwiftPDF preserves your original slide layouts, fonts, and images with perfect accuracy. No signup required.",
   keywords: [
@@ -34,108 +34,67 @@ export default function Page() {
   const pptToPdfFaqs = [
     {
       question: "Why should I convert PowerPoint to PDF?",
-      answer: `Converting PowerPoint to PDF makes sure your slides look the same on every device.
-
-This is really helpful because it stops problems like:
-
-* Your slides looking different on devices
-
-* Fonts going missing
-
-* Layout getting messed up
-
-when you share presentations with others.
-
-It is also good to convert PowerPoint to PDF so you can be sure that your slides look exactly as you want.
-
-PowerPoint, to PDF conversion helps prevent issues.
-
-You can share PowerPoint as PDF.`,
+      answer: "Converting your presentation to PDF ensures that your slides look the same on every device. It prevents common issues like missing fonts, broken layouts, or formatting shifts when sharing your deck with others.",
     },
     {
       question: "Will my slide layout remain the same after conversion?",
-      answer: `When you convert PowerPoint to PDF you can be sure that your slides will look the same on every device. This is because it stops things like formatting issues and missing fonts from happening. It also keeps the layout right.
-
-SwiftPDF makes sure that the structure of your slides and the way things are lined up stay the same. It also keeps your images and text in the place. This means that your presentation will look just like it did when you made it even when you share it with people. Converting PowerPoint to PDF is a way to keep your presentation looking good on all devices.`,
+      answer: "Yes. SwiftPDF is designed to maintain the exact structure of your slides. Your text alignment, images, charts, and table positions are preserved with high fidelity.",
     },
     {
       question: "Are fonts and text preserved in the PDF?",
-      answer: `Yes. All fonts are. Converted to keep the text clear.
-
-This way the text stays sharp and easy to read.
-
-It is also searchable.
-
-The fonts are. Embedded or changed to make sure this works.`,
+      answer: "Absolutely. All fonts are embedded or accurately rendered to ensure the text remains sharp, clear, and fully searchable within the PDF.",
     },
     {
       question: "What happens to animations and transitions?",
-      answer: `When you make a PDF document from something with animations and transitions all the moving parts get turned into static slides. This makes the PDF document look really clean and professional. The animations and transitions are. You are left with a simple and nice looking PDF document, with static slides.`,
+      answer: "Since PDF is a static format, any animations or slide transitions will be removed. Each slide in your PowerPoint will become a single, high-quality static page in the PDF.",
     },
     {
       question: "Is PPT to PDF conversion secure?",
-      answer: `So your files are safe. We encrypt your files when we send them and get rid of them after we are done with them. This way we can make sure your information is private. Your files are protected because we encrypt them and then we delete them.`,
+      answer: "Yes. Your files are protected with SSL encryption during transfer and are automatically deleted from our servers once the conversion is complete to ensure your privacy.",
     },
     {
       question: "How long does it take to convert PowerPoint to PDF?",
-      answer: `Most files are done fast it takes just a few seconds. This is because the time it takes to process the files depends on how big the filesre how complicated they are. The files are processed within seconds for the most part and the file size and complexity of the files play a role in this.`,
+      answer: "Most presentations are converted within seconds. Processing time may vary slightly depending on the file size and the complexity of the graphics within your slides.",
     },
     {
       question: "Can I convert both PPT and PPTX files?",
-      answer: `Yes. SwiftPDF supports both PPT and PPTX formats and converts them into high-quality PDF files.`,
+      answer: "Yes, SwiftPDF supports both the older .ppt format and the modern .pptx format used by Microsoft PowerPoint 2007 and later.",
     },
     {
       question: "Will images and graphics be preserved?",
-      answer: `The images and the icons and the charts and the graphics are all kept in good quality when they are, in the PDF. They also stay lined up properly in the PDF. The images and the graphics and the charts and the icons look great. Are easy to see in the PDF.`,
+      answer: "Yes. All high-resolution images, icons, and vector graphics are preserved during conversion, ensuring your presentation looks professional when printed or shared.",
     },
     {
       question: "Do I need to install software to convert PPT to PDF?",
-      answer: `SwiftPDF is really easy to use because it works online. This means you can convert your files directly in your browser. You do not have to install anything on your computer to use SwiftPDF. You can just go to the website. Start converting your files right away, in your browser with SwiftPDF.`,
+      answer: "No. SwiftPDF is a cloud-based tool that works directly in your web browser. No downloads or installations are required.",
     },
     {
-      question: "Are my presentation files stored after conversion?",
-      answer: `No the files are processed for a time and then they are automatically deleted after they have been converted.`,
-    },
-
-    // 🔥 EXTRA SEO + USER INTENT FAQs
-    {
-      question: "Can I convert large PowerPoint files to PDF?",
-      answer: `Yes. SwiftPDF works with presentations.
-
-The time it takes to process them can be different based on how large the file's.`,
-    },
-    {
-      question: "Will the PDF be suitable for printing?",
-      answer: `The converted PDF is really good. It looks great which makes it perfect for printing and sharing with other people, at work. The converted PDF has a quality that everyone will like.`,
-    },
-    {
-      question: "Can I convert multiple PowerPoint files at once?",
-      answer: `You can upload files and then convert them all at the same time. This makes the process really efficient. You can do it all in one session. You can upload all your files. Then convert these files in just one go.`,
-    },
-    {
-      question: "Is the converted PDF editable?",
-      answer: `PDF files are made to keep the layout the same so you cannot easily change them without using software. PDF files are really good, at keeping things looking the same that is why it is hard to edit PDF files.`,
-    },
-    {
-      question: "Does SwiftPDF require sign-up or login?",
-      answer:
-        "You do not need to create an account or log in to use the PPT to PDF converter. The PPT to PDF converter is available for use, without an account or logging in.",
+      question: "Is this PPT to PDF tool free?",
+      answer: "Yes, SwiftPDF is completely free to use. You can convert your presentations without any hidden costs, sign-ups, or login requirements.",
     },
   ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* 1. SEO Header Section - Focus on Presentation Integrity */}
+      {/* 1. SEO Header Section */}
       <section className="bg-white py-16 px-4 border-b border-gray-100 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
             High-Quality <span className="text-red-600">PowerPoint to PDF</span>{" "}
             Converter
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            You need to protect your presentation layout. You can turn your
-            **PPT and PPTX slides** into non-editable PDF documents. This way
-            you get to keep the fonts and images in your **PPT and PPTX slides**
-            looking really good.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            Protect your presentation layout by converting **PPT and PPTX slides** 
+            into non-editable, professional PDF documents. Maintain the integrity 
+            of your fonts, graphics, and charts effortlessly.
+          </p>
+
+          {/* New H2 Section for SEO Hierarchy */}
+          <h2 className="text-2xl font-bold text-gray-800">
+            Professional PPTX to PDF Conversion Online
+          </h2>
+          <p className="text-gray-500 mt-2">
+            The fastest way to turn your presentation decks into shareable documents.
           </p>
         </div>
       </section>
@@ -144,6 +103,8 @@ The time it takes to process them can be different based on how large the file's
       <section className="py-12" aria-label="PPT to PDF Conversion Workspace">
         <PPTToPDFClient />
       </section>
+
+      {/* 3. Cleaned FAQ Section */}
       <FaqSection faqs={pptToPdfFaqs} />
 
       <Schema

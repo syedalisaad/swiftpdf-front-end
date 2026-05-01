@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   // Optimized H1/Title (56 characters)
-  title: "Convert PDF to Excel Online - Free PDF Table Extractor | SwiftPDF",
+title: "PDF to Excel Converter | Convert PDF to XLSX Online | SwiftPDF",
   description: "Extract tables from PDF to Excel spreadsheets (.xlsx) instantly. SwiftPDF uses AI to accurately map rows and columns for easy data analysis.",
   keywords: ["pdf to excel", "convert pdf to xlsx", "extract table from pdf", "pdf to spreadsheet", "free online pdf converter"],
   alternates: {
